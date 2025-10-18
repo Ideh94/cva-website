@@ -1,0 +1,14 @@
+/* SubFooter.css */
+.subfooter {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 15px 10px;
+  border-top: 1px solid #444;
+}
+
+.subfooter p {
+  margin: 0;
+  line-height: 1.6;
+}
