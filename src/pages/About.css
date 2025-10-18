@@ -1,0 +1,137 @@
+.about-page {
+    padding: 0px 0px;
+}
+
+.about-hero {
+    background-color: #005599;
+    color: white;
+    padding: 200px 20px;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h2 {
+    color: #003366;
+    margin-top: 20px;
+}
+
+.about-text p {
+    font-size: 1.05rem;
+    margin: 10px 0;
+}
+
+.about-text ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.about-text li {
+    margin: 10px 0;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.timeline-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.timeline-section h2 {
+    font-size: 2rem;
+    color: #003366;
+    margin-bottom: 40px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-left: 30px;
+    border-left: 4px solid #003366;
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-year {
+    font-weight: bold;
+    color: #003366;
+    background-color: #e6eef7;
+    padding: 8px 14px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.timeline-content {
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: #003366;
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 15px;
+    }
+
+    .timeline-content {
+        padding: 15px;
+    }
+}
