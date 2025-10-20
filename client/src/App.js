@@ -1,5 +1,6 @@
 // App.js
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { theme } from "./constants/theme";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import SubFooter from './components/SubFooter';
@@ -9,6 +10,19 @@ import Services from './pages/Services';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import './App.css'; // Make sure global styles are applied
+
+
+Object.entries(theme.colors).forEach(([key, value]) => {
+  if (typeof value === "string") {
+    document.documentElement.style.setProperty(`--color-${key}`, value);
+  } else if (typeof value === "object") {
+    Object.entries(value).forEach(([subKey, subValue]) => {
+      document.documentElement.style.setProperty(`--color-${key}-${subKey}`, subValue);
+    });
+  }
+});
+
+
 
 function App() {
   return (
