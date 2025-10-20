@@ -31,8 +31,9 @@ function Home() {
               marginBottom: theme.spacing.md,
             }}
           >
-            Welcome to CVA Multi Services Nigeria Ltd.
+            Welcome to <text style={{color: "#005d27"}}>CVA Multi Services Nigeria Ltd.</text>
           </h1>
+        
           <p
             style={{
               fontSize: theme.typography.sizes.lg,
