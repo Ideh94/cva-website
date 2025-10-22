@@ -1,4 +1,3 @@
-// src/components/Navbar.js
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { theme } from "../constants/theme";
@@ -28,10 +27,13 @@ function Navbar() {
         position: "sticky",
         top: 0,
         zIndex: 999,
-        backgroundColor: scrolled ? theme.colors.primaryDark : theme.colors.primary,
+        backgroundColor: scrolled
+          ? theme.colors.primaryDark
+          : theme.colors.primary,
         boxShadow: scrolled ? theme.shadow.md : "none",
-        transition: "all 0.3s ease",
+        transition: theme.transition.base,
         fontFamily: theme.typography.fontFamily,
+        backdropFilter: "blur(6px)",
       }}
     >
       <div
@@ -39,7 +41,9 @@ function Navbar() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: theme.spacing.md,
+          padding: `${theme.spacing.sm} ${theme.spacing.lg}`,
+          maxWidth: theme.spacing.container,
+          margin: "0 auto",
         }}
       >
         {/* Brand */}
@@ -47,22 +51,23 @@ function Navbar() {
           to="/"
           style={{
             color: theme.colors.text.inverse,
-            fontWeight: theme.typography.weight.semibold,
+            fontWeight: theme.typography.weight.bold,
             fontSize: theme.typography.sizes.lg,
             textDecoration: "none",
+            letterSpacing: "0.5px",
           }}
         >
           CVA Multi Services
         </Link>
 
-        {/* Hamburger (mobile only) */}
+        {/* Hamburger (mobile) */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           style={{
             background: "none",
             border: "none",
             color: theme.colors.text.inverse,
-            fontSize: "1.5rem",
+            fontSize: "1.6rem",
             cursor: "pointer",
           }}
           className="hamburger"
@@ -95,7 +100,7 @@ function Navbar() {
                     borderBottom: isActive
                       ? `2px solid ${theme.colors.accent}`
                       : "2px solid transparent",
-                    transition: "border-bottom 0.3s ease",
+                    transition: theme.transition.base,
                     textDecoration: "none",
                     paddingBottom: "2px",
                   }}
@@ -118,7 +123,7 @@ function Navbar() {
             display: "flex",
             flexDirection: "column",
             gap: theme.spacing.md,
-            backgroundColor: theme.colors.primary,
+            backgroundColor: theme.colors.primaryDark,
             animation: "slideDown 0.3s ease",
           }}
           className="mobile-menu"
@@ -150,7 +155,7 @@ function Navbar() {
         </ul>
       )}
 
-      {/* Mobile menu animation and responsive visibility */}
+      {/* Responsive Styling */}
       <style>
         {`
           @keyframes slideDown {

@@ -1,36 +1,53 @@
+/*Later we'll delete this navbar styling, and move the styling into homestyles.js.
+This is because I want all the home styling to be in the homeStyles.js, including the NavBar,
+Hero section, About, Features, Testimonials,Blog, and Footer sections
+*/
+
+
 .navbar {
-  background-color: #003366;
-  color: white;
-  padding: 15px 30px;
+  background-color: #0A3B5F; /* theme.colors.primary */
+  color: #FFFFFF;
+  padding: 16px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  position: sticky; /* Or fixed if you want it always visible */
+  position: sticky;
   top: 0;
   z-index: 1000;
   width: 100%;
+  box-shadow: 0 4px 10px rgba(8, 12, 20, 0.08);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
-  color: white;
+  color: #FFFFFF;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
+  color: #A8E8D4; /* theme.colors.accentMuted */
+  border-bottom: 2px solid #36D1A8; /* theme.colors.accent */
 }
 
 /* Responsive */
@@ -38,15 +55,22 @@
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    padding: 16px;
   }
 
   .nav-links {
     flex-direction: column;
     width: 100%;
     padding-left: 0;
+    gap: 12px;
   }
 
   .nav-links li {
-    padding: 10px 0;
+    width: 100%;
+  }
+
+  .nav-links a {
+    width: 100%;
+    display: block;
   }
 }

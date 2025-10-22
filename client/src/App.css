@@ -25,3 +25,6 @@ html, body, #root {
   flex-grow: 1;
   padding: 20px;
 }
+
+/*I removed :root variables because I want the app to be styled in JSX instead of using CSS.
+Therefore,in later commits, I might delete this App.css*/
