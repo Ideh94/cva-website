@@ -30,7 +30,7 @@ export const homeStyles = {
   },
 
 
-  
+
 
   // =====================
   // Hero Section
@@ -132,37 +132,72 @@ export const homeStyles = {
   // =====================
   // About Section
   // =====================
- aboutSection: {
-  padding: `${theme.spacing.xxl} ${theme.spacing.lg}`,
-  textAlign: "center",
-  backgroundColor: theme.colors.surface,
-  position: "relative",
-},
-aboutText: {
-  maxWidth: "720px",
-  margin: "0 auto",
-  fontSize: theme.typography.sizes.md,
-  color: theme.colors.text.secondary,
-  lineHeight: 1.7,
-  marginBottom: theme.spacing.md,
-},
-sectionDivider: {
-  width: "80px",
-  height: "4px",
-  backgroundColor: theme.colors.accent,
-  margin: `0 auto ${theme.spacing.lg} auto`,
-  borderRadius: theme.radius.round,
-},
-aboutLink: {
-  color: theme.colors.accent,
-  fontWeight: theme.typography.weight.semibold,
-  textDecoration: 'none',
-  alignSelf: 'flex-start',
-  transition: 'color 0.3s ease',
-  ':hover': {
-    color: theme.colors.accentLight,
+  aboutSection: {
+    padding: `${theme.spacing.xxl} ${theme.spacing.lg}`,
+    textAlign: "center",
+    backgroundColor: theme.colors.surface,
+    position: "relative",
   },
-},
+  aboutText: {
+    maxWidth: "720px",
+    margin: "0 auto",
+    fontSize: theme.typography.sizes.md,
+    color: theme.colors.text.secondary,
+    lineHeight: 1.7,
+    marginBottom: theme.spacing.md,
+  },
+  sectionDivider: {
+    width: "80px",
+    height: "4px",
+    backgroundColor: theme.colors.accent,
+    margin: `0 auto ${theme.spacing.lg} auto`,
+    borderRadius: theme.radius.round,
+  },
+  aboutLink: {
+    color: theme.colors.accent,
+    fontWeight: theme.typography.weight.semibold,
+    textDecoration: 'none',
+    alignSelf: 'flex-start',
+    transition: 'color 0.3s ease',
+    ':hover': {
+      color: theme.colors.accentLight,
+    },
+  },
+
+  // =====================
+  // Our Businesses Section
+  // =====================
+  ourbusinessesSection: {
+    padding: `${theme.spacing.xxl} ${theme.spacing.lg}`,
+    textAlign: "center",
+    backgroundColor: theme.colors.surface,
+    position: "relative",
+  },
+  ourbusinessesText: {
+    maxWidth: "720px",
+    margin: "0 auto",
+    fontSize: theme.typography.sizes.md,
+    color: theme.colors.text.secondary,
+    lineHeight: 1.7,
+    marginBottom: theme.spacing.md,
+  },
+  sectionDivider: {
+    width: "80px",
+    height: "4px",
+    backgroundColor: theme.colors.accent,
+    margin: `0 auto ${theme.spacing.lg} auto`,
+    borderRadius: theme.radius.round,
+  },
+  ourbusinessesLink: {
+    color: theme.colors.accent,
+    fontWeight: theme.typography.weight.semibold,
+    textDecoration: 'none',
+    alignSelf: 'flex-start',
+    transition: 'color 0.3s ease',
+    ':hover': {
+      color: theme.colors.accentLight,
+    },
+  },
 
   // =====================
   // Features Section
@@ -280,171 +315,171 @@ aboutLink: {
   },
 
   testimonialButton: {
-  base: {
-    position: "absolute",
-    top: "50%",
-    transform: "translateY(-50%)",
-    backgroundColor: "rgba(59, 130, 246, 0.7)", // semi-transparent blue
-    border: "none",
-    color: theme.colors.surface,
-    width: "40px",
-    height: "40px",
-    borderRadius: theme.radius.sm,
-    cursor: "pointer",
-    fontSize: theme.typography.sizes.lg,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    transition: `all ${theme.transition.fast}`,
-    zIndex: 10,
-  },
-  hover: {
-    backgroundColor: theme.colors.accent, // full accent color
-    transform: "translateY(-50%) scale(1.15)",
-  },
-  left: {
-    left: "10px", // outside left edge
-  },
-  right: {
-    right: "10px", // outside right edge
-  },
-  responsive: {
-    // reduce size on small screens
-    "@media (max-width: 640px)": {
-      width: "32px",
-      height: "32px",
-      fontSize: theme.typography.sizes.md,
-      left: "-10px",
-      right: "-10px",
+    base: {
+      position: "absolute",
+      top: "50%",
+      transform: "translateY(-50%)",
+      backgroundColor: "rgba(59, 130, 246, 0.7)", // semi-transparent blue
+      border: "none",
+      color: theme.colors.surface,
+      width: "40px",
+      height: "40px",
+      borderRadius: theme.radius.sm,
+      cursor: "pointer",
+      fontSize: theme.typography.sizes.lg,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      transition: `all ${theme.transition.fast}`,
+      zIndex: 10,
+    },
+    hover: {
+      backgroundColor: theme.colors.accent, // full accent color
+      transform: "translateY(-50%) scale(1.15)",
+    },
+    left: {
+      left: "10px", // outside left edge
+    },
+    right: {
+      right: "10px", // outside right edge
+    },
+    responsive: {
+      // reduce size on small screens
+      "@media (max-width: 640px)": {
+        width: "32px",
+        height: "32px",
+        fontSize: theme.typography.sizes.md,
+        left: "-10px",
+        right: "-10px",
+      },
     },
   },
-},
 
 
 
-// =====================
-// Blog Section
-// =====================
-blogSection: {
-  padding: `${theme.spacing.xxl} 0`,
-  backgroundColor: theme.colors.canvas,
-  textAlign: "center",
-},
-
-
-blogListResponsive: (width) => ({
-  display: "grid",
-  gridTemplateColumns: width < 768 ? "1fr" : "repeat(3, 1fr)",
-  gap: theme.spacing.lg,
-  marginTop: theme.spacing.lg,
-  padding: `0 ${theme.spacing.md}`,
-}),
-
-blogPostCard: {
-  backgroundColor: theme.colors.surface,
-  padding: theme.spacing.lg,
-  borderRadius: theme.radius.lg,
-  boxShadow: theme.shadow.md,
-  transition: `transform ${theme.transition.base}, box-shadow ${theme.transition.base}`,
-  cursor: "pointer",
-  ":hover": {
-    transform: "translateY(-4px)",
-    boxShadow: theme.shadow.lg,
+  // =====================
+  // Blog Section
+  // =====================
+  blogSection: {
+    padding: `${theme.spacing.xxl} 0`,
+    backgroundColor: theme.colors.canvas,
+    textAlign: "center",
   },
-},
 
-blogPostTitle: {
-  fontSize: theme.typography.sizes.lg,
-  fontWeight: theme.typography.weight.semibold,
-  marginBottom: theme.spacing.sm,
-  color: theme.colors.primaryDark,
-},
 
-blogPostText: {
-  fontSize: theme.typography.sizes.md,
-  color: theme.colors.text.secondary,
-  lineHeight: 1.6,
-  marginBottom: theme.spacing.md,
-},
+  blogListResponsive: (width) => ({
+    display: "grid",
+    gridTemplateColumns: width < 768 ? "1fr" : "repeat(3, 1fr)",
+    gap: theme.spacing.lg,
+    marginTop: theme.spacing.lg,
+    padding: `0 ${theme.spacing.md}`,
+  }),
 
-blogPostLink: {
-  color: theme.colors.accent,
-  fontWeight: theme.typography.weight.medium,
-  textDecoration: "none",
-  transition: `color ${theme.transition.fast}`,
-  ":hover": {
-    color: theme.colors.accentDark,
+  blogPostCard: {
+    backgroundColor: theme.colors.surface,
+    padding: theme.spacing.lg,
+    borderRadius: theme.radius.lg,
+    boxShadow: theme.shadow.md,
+    transition: `transform ${theme.transition.base}, box-shadow ${theme.transition.base}`,
+    cursor: "pointer",
+    ":hover": {
+      transform: "translateY(-4px)",
+      boxShadow: theme.shadow.lg,
+    },
   },
-},
-blogPostImage: {
-  width: "100%",
-  height: "180px",
-  objectFit: "cover",
-  borderRadius: `${theme.radius.md} ${theme.radius.md} 0 0`,
-  marginBottom: theme.spacing.md,
-},
 
-
-// =====================
-// footer Section
-// =====================
-
-footer: {
-  backgroundColor: theme.colors.primaryDark,
-  color: theme.colors.text.inverse,
-  padding: `${theme.spacing.xl} ${theme.spacing.lg}`,
-},
-footerContainer: {
-  display: 'flex',
-  flexWrap: 'wrap',
-  justifyContent: 'space-between',
-  maxWidth: theme.spacing.container,
-  margin: '0 auto',
-  gap: theme.spacing.xl,
-},
-footerColumn: {
-  flex: '1 1 250px',
-  marginBottom: theme.spacing.lg,
-},
-footerTitle: {
-  fontSize: theme.typography.sizes.lg,
-  fontWeight: theme.typography.weight.bold,
-  marginBottom: theme.spacing.sm,
-  color: theme.colors.accent,
-},
-footerList: {
-  listStyle: 'none',
-  padding: 0,
-  margin: 0,
-},
-footerListItem: {
-  fontSize: theme.typography.sizes.md,
-  marginBottom: theme.spacing.xs,
-  color: theme.colors.text.secondary,
-},
-socialIcons: {
-  display: 'flex',
-  gap: theme.spacing.sm,
-  marginTop: theme.spacing.sm,
-},
-socialLink: {
-  color: theme.colors.accent,
-  fontSize: '1.25rem',
-  transition: theme.transition.base,
-  ':hover': {
-    color: theme.colors.accentDark,
+  blogPostTitle: {
+    fontSize: theme.typography.sizes.lg,
+    fontWeight: theme.typography.weight.semibold,
+    marginBottom: theme.spacing.sm,
+    color: theme.colors.primaryDark,
   },
-},
-searchBox: {
-  marginTop: theme.spacing.md,
-},
-searchInput: {
-  padding: theme.spacing.sm,
-  borderRadius: theme.radius.md,
-  border: `1px solid ${theme.colors.border}`,
-  width: '100%',
-  fontSize: theme.typography.sizes.md,
-},
+
+  blogPostText: {
+    fontSize: theme.typography.sizes.md,
+    color: theme.colors.text.secondary,
+    lineHeight: 1.6,
+    marginBottom: theme.spacing.md,
+  },
+
+  blogPostLink: {
+    color: theme.colors.accent,
+    fontWeight: theme.typography.weight.medium,
+    textDecoration: "none",
+    transition: `color ${theme.transition.fast}`,
+    ":hover": {
+      color: theme.colors.accentDark,
+    },
+  },
+  blogPostImage: {
+    width: "100%",
+    height: "180px",
+    objectFit: "cover",
+    borderRadius: `${theme.radius.md} ${theme.radius.md} 0 0`,
+    marginBottom: theme.spacing.md,
+  },
+
+
+  // =====================
+  // footer Section
+  // =====================
+
+  footer: {
+    backgroundColor: theme.colors.primaryDark,
+    color: theme.colors.text.inverse,
+    padding: `${theme.spacing.xl} ${theme.spacing.lg}`,
+  },
+  footerContainer: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    maxWidth: theme.spacing.container,
+    margin: '0 auto',
+    gap: theme.spacing.xl,
+  },
+  footerColumn: {
+    flex: '1 1 250px',
+    marginBottom: theme.spacing.lg,
+  },
+  footerTitle: {
+    fontSize: theme.typography.sizes.lg,
+    fontWeight: theme.typography.weight.bold,
+    marginBottom: theme.spacing.sm,
+    color: theme.colors.accent,
+  },
+  footerList: {
+    listStyle: 'none',
+    padding: 0,
+    margin: 0,
+  },
+  footerListItem: {
+    fontSize: theme.typography.sizes.md,
+    marginBottom: theme.spacing.xs,
+    color: theme.colors.text.secondary,
+  },
+  socialIcons: {
+    display: 'flex',
+    gap: theme.spacing.sm,
+    marginTop: theme.spacing.sm,
+  },
+  socialLink: {
+    color: theme.colors.accent,
+    fontSize: '1.25rem',
+    transition: theme.transition.base,
+    ':hover': {
+      color: theme.colors.accentDark,
+    },
+  },
+  searchBox: {
+    marginTop: theme.spacing.md,
+  },
+  searchInput: {
+    padding: theme.spacing.sm,
+    borderRadius: theme.radius.md,
+    border: `1px solid ${theme.colors.border}`,
+    width: '100%',
+    fontSize: theme.typography.sizes.md,
+  },
 
 
 

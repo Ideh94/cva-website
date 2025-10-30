@@ -3,9 +3,17 @@ import { homeStyles as s, homeAnimations } from "../constants/homeStyles";
 
 // ====== Data Constants ======
 const features = [
-  { icon: "🌾", title: "Agro Distribution", text: "Efficient hybrid logistics for manufacturers, farmers, and retailers." },
-  { icon: "🎓", title: "Consulting & Training", text: "Capacity-building for aquaculture, agri-business, and value chains." },
-  { icon: "💻", title: "Smart Technology", text: "Digital platforms to trace and manage supply networks with ease." },
+  { icon: "", title: "Fish Production", text: "Efficient hybrid logistics for manufacturers, farmers, and retailers." },
+  { icon: "", title: "Rice Farming", text: "Capacity-building for aquaculture, agri-business, and value chains." },
+  { icon: "", title: "Processing & Packaging", text: "Digital platforms to trace and manage supply networks with ease." },
+  { icon: "", title: "Seasonings", text: "Digital platforms to trace and manage supply networks with ease." },
+  { icon: "", title: "Agro Distribution", text: "Digital platforms to trace and manage supply networks with ease." },
+  { icon: "", title: "Logistics", text: "Digital platforms to trace and manage supply networks with ease." },
+  { icon: "", title: "Training Academy", text: "Digital platforms to trace and manage supply networks with ease." },
+  { icon: "", title: "Modern Farm Set-Up & Construction", text: "Digital platforms to trace and manage supply networks with ease." },
+  { icon: "", title: "Real Estate", text: "Digital platforms to trace and manage supply networks with ease." },
+
+
 ];
 
 const blogPosts = [
@@ -52,10 +60,10 @@ function Home() {
         <div style={s.heroBackground}></div>
         <div style={s.heroContent}>
           <h1 style={s.heroTitle}>
-            Welcome to <span style={s.heroAccentText}>CVA Multi Services Nigeria Ltd.</span>
+            Welcome to <span style={s.heroAccentText}>CVA Multi Services</span>
           </h1>
           <p style={s.heroParagraph}>
-            Empowering businesses with innovative solutions in distribution, agriculture, logistics, and consulting across Nigeria.
+            A diversified Nigerian company dedicated to meeting the needs of individuals and businesses through value-added products and services.
           </p>
           <a
             href="/contact"
@@ -88,6 +96,13 @@ function Home() {
         <a href="/about" style={s.aboutLink}>Read More →</a>
       </section>
 
+      {/* Our Businesses */}
+      <section style={s.ourbusinessesSection}>
+        <h2 style={s.sectionTitle}>Our Businesses</h2>
+        {/* Section Divider*/}
+
+      </section>
+
 
       {/* Features Section */}
       <section style={s.featuresSection}>
@@ -111,25 +126,25 @@ function Home() {
       <TestimonialsCarousel testimonials={testimonialsData} />
 
       {/* Blog Section */}
-<section style={s.blogSection}>
-  <h2 style={s.blogSectionTitle}>Latest From Our Blog</h2>
+      <section style={s.blogSection}>
+        <h2 style={s.blogSectionTitle}>Latest From Our Blog</h2>
 
-  {/* Section Divider */}
-  <div style={s.sectionDivider}></div>
+        {/* Section Divider */}
+        <div style={s.sectionDivider}></div>
 
-  <div style={s.blogListResponsive(windowWidth)}>
-    {blogPosts.map((post, index) => (
-      <div key={index} style={s.blogPostCard}>
-        {post.image && (
-          <img src={post.image} alt={post.title} style={s.blogPostImage} />
-        )}
-        <h3 style={s.blogPostTitle}>{post.title}</h3>
-        <p style={s.blogPostText}>{post.text}</p>
-        <a href="/blog" style={s.blogPostLink}>Read More →</a>
-      </div>
-    ))}
-  </div>
-</section>
+        <div style={s.blogListResponsive(windowWidth)}>
+          {blogPosts.map((post, index) => (
+            <div key={index} style={s.blogPostCard}>
+              {post.image && (
+                <img src={post.image} alt={post.title} style={s.blogPostImage} />
+              )}
+              <h3 style={s.blogPostTitle}>{post.title}</h3>
+              <p style={s.blogPostText}>{post.text}</p>
+              <a href="/blog" style={s.blogPostLink}>Read More →</a>
+            </div>
+          ))}
+        </div>
+      </section>
 
     </div>
   );
@@ -166,23 +181,23 @@ function TestimonialsCarousel({ testimonials }) {
       <div style={s.sectionDivider}></div>
 
       {/* Buttons */}
-    <button
-  onClick={prevTestimonial}
-  style={{ ...s.testimonialButton.base, ...s.testimonialButton.left }}
-  onMouseEnter={(e) => Object.assign(e.currentTarget.style, s.testimonialButton.hover)}
-  onMouseLeave={(e) => Object.assign(e.currentTarget.style, s.testimonialButton.base)}
->
-  ◀
-</button>
+      <button
+        onClick={prevTestimonial}
+        style={{ ...s.testimonialButton.base, ...s.testimonialButton.left }}
+        onMouseEnter={(e) => Object.assign(e.currentTarget.style, s.testimonialButton.hover)}
+        onMouseLeave={(e) => Object.assign(e.currentTarget.style, s.testimonialButton.base)}
+      >
+        ◀
+      </button>
 
-<button
-  onClick={nextTestimonial}
-  style={{ ...s.testimonialButton.base, ...s.testimonialButton.right }}
-  onMouseEnter={(e) => Object.assign(e.currentTarget.style, s.testimonialButton.hover)}
-  onMouseLeave={(e) => Object.assign(e.currentTarget.style, s.testimonialButton.base)}
->
-  ▶
-</button>
+      <button
+        onClick={nextTestimonial}
+        style={{ ...s.testimonialButton.base, ...s.testimonialButton.right }}
+        onMouseEnter={(e) => Object.assign(e.currentTarget.style, s.testimonialButton.hover)}
+        onMouseLeave={(e) => Object.assign(e.currentTarget.style, s.testimonialButton.base)}
+      >
+        ▶
+      </button>
 
 
       <div
