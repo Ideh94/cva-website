@@ -11,7 +11,7 @@ function Navbar() {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Our Businesses", path: "/ourbusinesses" },
-    { name: "Blog", path: "/blog" },
+    { name: "News", path: "/News" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -57,7 +57,7 @@ function Navbar() {
             letterSpacing: "0.5px",
           }}
         >
-          CVA Group
+          CVA
         </Link>
 
         {/* Hamburger (mobile) */}

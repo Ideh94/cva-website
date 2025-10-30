@@ -16,7 +16,7 @@ const features = [
 
 ];
 
-const blogPosts = [
+const newsPosts = [
   {
     title: '5 Ways Technology Is Transforming Agriculture',
     text: 'Discover how smart platforms and traceability tools are revolutionizing the agri-value chain across Nigeria.'
@@ -125,15 +125,15 @@ function Home() {
       {/* Testimonials Section */}
       <TestimonialsCarousel testimonials={testimonialsData} />
 
-      {/* Blog Section */}
+      {/* News Section */}
       <section style={s.blogSection}>
-        <h2 style={s.blogSectionTitle}>Latest From Our Blog</h2>
+        <h2 style={s.blogSectionTitle}>Latest News</h2>
 
         {/* Section Divider */}
         <div style={s.sectionDivider}></div>
 
         <div style={s.blogListResponsive(windowWidth)}>
-          {blogPosts.map((post, index) => (
+          {newsPosts.map((post, index) => (
             <div key={index} style={s.blogPostCard}>
               {post.image && (
                 <img src={post.image} alt={post.title} style={s.blogPostImage} />

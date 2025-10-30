@@ -7,7 +7,7 @@ import SubFooter from './components/SubFooter';
 import Home from './pages/Home';
 import About from './pages/About';
 import OurBusinesses from './pages/OurBusinesses';
-import Blog from './pages/Blog';
+import Blog from './pages/News';
 import Contact from './pages/Contact';
 import './App.css'; // Make sure global styles are applied
 
