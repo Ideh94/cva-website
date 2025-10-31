@@ -3,15 +3,15 @@ import { homeStyles as s, homeAnimations } from "../constants/homeStyles";
 
 // ====== Data Constants ======
 const features = [
-  { icon: "", title: "Fish Production", text: "Efficient hybrid logistics for manufacturers, farmers, and retailers." },
-  { icon: "", title: "Rice Farming", text: "Capacity-building for aquaculture, agri-business, and value chains." },
-  { icon: "", title: "Processing & Packaging", text: "Digital platforms to trace and manage supply networks with ease." },
-  { icon: "", title: "Seasonings", text: "Digital platforms to trace and manage supply networks with ease." },
-  { icon: "", title: "Agro Distribution", text: "Digital platforms to trace and manage supply networks with ease." },
-  { icon: "", title: "Logistics", text: "Digital platforms to trace and manage supply networks with ease." },
-  { icon: "", title: "Training Academy", text: "Digital platforms to trace and manage supply networks with ease." },
-  { icon: "", title: "Modern Farm Set-Up & Construction", text: "Digital platforms to trace and manage supply networks with ease." },
-  { icon: "", title: "Real Estate", text: "Digital platforms to trace and manage supply networks with ease." },
+  { icon: "", title: "Fish Production", text: "We operate modern fish farms designed to supply fresh, healthy, and affordable fish to local markets. Our focus on quality aquaculture practices ensures consistent output while supporting food security.." },
+  { icon: "", title: "Rice Farming", text: "CVA Group cultivates and processes rice to reduce Nigeria’s dependence on imports. Through mechanized farming and local value addition, we deliver nutritious, affordable, and well-packaged rice products for consumers." },
+  { icon: "", title: "Processing & Packaging", text: "Our processing facilities transform raw produce into consumer-ready goods, with hygienic and innovative packaging solutions that ensure freshness, safety, and extended shelf life." },
+  { icon: "", title: "Seasonings", text: "We produce natural, locally inspired seasonings that enhance taste and nutrition. Our seasoning line is tailored to Nigerian cuisine, offering both traditional flavors and healthy alternatives." },
+  { icon: "", title: "Agro Distribution", text: "We bridge the gap between producers and consumers by distributing farm inputs, processed foods, and agricultural products efficiently and affordably across Nigeria." },
+  { icon: "", title: "Logistics", text: "With a strong logistics arm, CVA Group ensures timely delivery of goods, services, and raw materials. We support businesses and individuals with reliable transport and supply chain solutions." },
+  { icon: "", title: "Training Academy", text: "Our academy equips farmers, entrepreneurs, and young professionals with practical skills in agribusiness, food processing, construction, and logistics. We are committed to building capacity for Nigeria’s next generation of innovators and leaders." },
+  { icon: "", title: "Construction", text: "" },
+  { icon: "", title: "Real Estate", text: "" },
 
 
 ];
