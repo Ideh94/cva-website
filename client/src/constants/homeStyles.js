@@ -181,13 +181,7 @@ export const homeStyles = {
     lineHeight: 1.7,
     marginBottom: theme.spacing.md,
   },
-  sectionDivider: {
-    width: "80px",
-    height: "4px",
-    backgroundColor: theme.colors.accent,
-    margin: `0 auto ${theme.spacing.lg} auto`,
-    borderRadius: theme.radius.round,
-  },
+  
   ourbusinessesLink: {
     color: theme.colors.accent,
     fontWeight: theme.typography.weight.semibold,

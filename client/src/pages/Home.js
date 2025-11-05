@@ -3,16 +3,9 @@ import { homeStyles as s, homeAnimations } from "../constants/homeStyles";
 
 // ====== Data Constants ======
 const features = [
-  { icon: "", title: "Fish Production", text: "We operate modern fish farms designed to supply fresh, healthy, and affordable fish to local markets. Our focus on quality aquaculture practices ensures consistent output while supporting food security.." },
-  { icon: "", title: "Rice Farming", text: "CVA Group cultivates and processes rice to reduce Nigeria’s dependence on imports. Through mechanized farming and local value addition, we deliver nutritious, affordable, and well-packaged rice products for consumers." },
-  { icon: "", title: "Processing & Packaging", text: "Our processing facilities transform raw produce into consumer-ready goods, with hygienic and innovative packaging solutions that ensure freshness, safety, and extended shelf life." },
-  { icon: "", title: "Seasonings", text: "We produce natural, locally inspired seasonings that enhance taste and nutrition. Our seasoning line is tailored to Nigerian cuisine, offering both traditional flavors and healthy alternatives." },
-  { icon: "", title: "Agro Distribution", text: "We bridge the gap between producers and consumers by distributing farm inputs, processed foods, and agricultural products efficiently and affordably across Nigeria." },
-  { icon: "", title: "Logistics", text: "With a strong logistics arm, CVA Group ensures timely delivery of goods, services, and raw materials. We support businesses and individuals with reliable transport and supply chain solutions." },
-  { icon: "", title: "Training Academy", text: "Our academy equips farmers, entrepreneurs, and young professionals with practical skills in agribusiness, food processing, construction, and logistics. We are committed to building capacity for Nigeria’s next generation of innovators and leaders." },
-  { icon: "", title: "Construction", text: "" },
-  { icon: "", title: "Real Estate", text: "" },
-
+  { icon: "", title: "Fish Production" },
+  { icon: "", title: "Rice Farming" },
+  { icon: "", title: "Processing & Packaging" },
 
 ];
 
@@ -60,7 +53,7 @@ function Home() {
         <div style={s.heroBackground}></div>
         <div style={s.heroContent}>
           <h1 style={s.heroTitle}>
-            Welcome to <span style={s.heroAccentText}>CVA Multi Services</span>
+            Welcome to <span style={s.heroAccentText}>CVA Group</span>
           </h1>
           <p style={s.heroParagraph}>
             A diversified Nigerian company dedicated to meeting the needs of individuals and businesses through value-added products and services.
@@ -99,8 +92,10 @@ function Home() {
       {/* Our Businesses */}
       <section style={s.ourbusinessesSection}>
         <h2 style={s.sectionTitle}>Our Businesses</h2>
-        {/* Section Divider*/}
-
+        <div style={s.sectionDivider}></div>
+        <p style={s.ourbusinessesText}>
+          As a diversified company, our interest in multiple industries indicates our determination to cater to our vision of providing locally and affordable products and services.
+        </p>
       </section>
 
 
@@ -177,7 +172,7 @@ function TestimonialsCarousel({ testimonials }) {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      <h2 style={s.sectionTitle}>What Our Clients Say</h2>
+      <h2 style={s.sectionTitle}>Products</h2>
       <div style={s.sectionDivider}></div>
 
       {/* Buttons */}

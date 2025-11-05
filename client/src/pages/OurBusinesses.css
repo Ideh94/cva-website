@@ -1,22 +1,38 @@
-.ourbusinesses-page {
-  padding: 100px 20px;
+.OurBusinesses-page-page {
+  padding: 0px 0px;
+}
+
+.OurBusinesses-hero {
+  background-color: #005599;
+  color: white;
+  padding: 200px 20px;
   text-align: center;
 }
 
-.ourbusinesses-page h1 {
-  font-size: 2rem;
-  color: #003366;
+.OurBusinesses-hero h1 {
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-.ourbusinesses-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  margin-top: 40px;
+.OurBusinesses-hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: auto;
 }
 
-.ourbusinesses-card {
+.OurBusinesses-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: "center";
+  align-items: "center";
+  padding-left: 600px;
+  padding-right: 600px;
+  gap: 20px;
+  margin-top: 40px;
+
+}
+
+.OurBusinesses-card {
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
@@ -24,7 +40,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.ourbusinesses-card h3 {
+.OurBusinesses-card h3 {
   color: #003366;
   margin-bottom: 10px;
 }

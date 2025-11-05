@@ -9,7 +9,7 @@ function Navbar() {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
+    { name: "About Us", path: "/about" },
     { name: "Our Businesses", path: "/ourbusinesses" },
     { name: "News", path: "/News" },
     { name: "Contact", path: "/contact" },
@@ -57,7 +57,7 @@ function Navbar() {
             letterSpacing: "0.5px",
           }}
         >
-          CVA
+          CVA Group
         </Link>
 
         {/* Hamburger (mobile) */}
