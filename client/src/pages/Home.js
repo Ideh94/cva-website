@@ -1,5 +1,13 @@
 import { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { homeStyles as s, homeAnimations } from "../constants/homeStyles";
+
+AOS.init({
+  duration: 1000,
+  once: true,
+});
+
 
 // ====== Data Constants ======
 const features = [
@@ -79,21 +87,21 @@ function Home() {
       </section>
 
       {/* About Section */}
-      <section style={s.aboutSection}>
-        <h2 style={s.sectionTitle}>Who we are</h2>
+      <section style={s.aboutSection} >
+        <h2 style={s.sectionTitle} >Who we are</h2>
         {/* Section Divider */}
         <div style={s.sectionDivider}></div>
-        <p style={s.aboutText}>
+        <p style={s.aboutText} data-aos="fade-up">
           We offer integrated services in agriculture, logistics, technology, and business consulting to empower producers, distributors, and consumers across Nigeria.
         </p>
-        <a href="/about" style={s.aboutLink}>Read More →</a>
+        <a href="/about" style={s.aboutLink} >Read More →</a>
       </section>
 
       {/* Our Businesses */}
       <section style={s.ourbusinessesSection}>
         <h2 style={s.sectionTitle}>Our Businesses</h2>
         <div style={s.sectionDivider}></div>
-        <p style={s.ourbusinessesText}>
+        <p style={s.ourbusinessesText} data-aos="fade-up">
           As a diversified company, our interest in multiple industries indicates our determination to cater to our vision of providing locally and affordable products and services.
         </p>
       </section>
