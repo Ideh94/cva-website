@@ -47,6 +47,7 @@ export const theme = {
       secondary: "#64768fff",    // Cool gray-blue for body text
       inverse: "#FFFFFF",      // For dark surfaces
       subtle: "#6B7280",       // Muted gray for captions or hints
+      newcolor: "#01612B"
     },
 
     // 🚦 Semantic

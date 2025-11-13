@@ -1,76 +1,132 @@
-/*Later we'll delete this navbar styling, and move the styling into homestyles.js.
-This is because I want all the home styling to be in the homeStyles.js, including the NavBar,
-Hero section, About, Features, Testimonials,Blog, and Footer sections
-*/
-
-
-.navbar {
-  background-color: #0A3B5F; /* theme.colors.primary */
-  color: #FFFFFF;
-  padding: 16px 32px;
+nav.navbar {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background-color: #ffffff                           ;
+  padding: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   position: sticky;
   top: 0;
   z-index: 1000;
-  width: 100%;
-  box-shadow: 0 4px 10px rgba(8, 12, 20, 0.08);
-  backdrop-filter: blur(6px);
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-.logo {
-  font-size: 1.25rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  color: #FFFFFF;
-}
 
-.nav-links {
-  list-style: none;
+
+.navbar-container {
   display: flex;
-  gap: 24px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 15px 20px;
+  margin: 0 auto;
+}
+
+.navbar-logo {
+  color: #01612B;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+  width: auto;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo:hover {
+  color: #F59E0B;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
   margin: 0;
   padding: 0;
+  flex: 1;
+  justify-content: flex-end;
 }
 
-.nav-links a {
-  color: #FFFFFF;
+.nav-menu li {
+  margin: 0;
+}
+
+.nav-menu a {
+  color: #01612B;
   text-decoration: none;
-  font-weight: 400;
-  padding-bottom: 2px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding: 0.5rem 0;
   border-bottom: 2px solid transparent;
-  transition: all 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #A8E8D4; /* theme.colors.accentMuted */
-  border-bottom: 2px solid #36D1A8; /* theme.colors.accent */
+.nav-menu a:hover {
+  color: #F59E0B;
 }
 
-/* Responsive */
+.nav-menu a.active {
+  color: #01612B;
+  border-bottom: 2px solid #F59E0B;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.hamburger:hover {
+  color: #F59E0B;
+}
+
+/* Mobile responsive */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 16px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    padding-left: 0;
-    gap: 12px;
-  }
-
-  .nav-links li {
-    width: 100%;
-  }
-
-  .nav-links a {
-    width: 100%;
+  .hamburger {
     display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #01612B;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-menu.active {
+    max-height: 300px;
+    padding: 1rem 0;
+  }
+
+  .nav-menu li {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .nav-menu a {
+    border-bottom: none;
+  }
+
+  .navbar-container {
+    padding: 15px 15px;
+  }
+
+  .nav-menu a.active {
+    border-bottom: none;
+    background-color: rgba(245, 158, 11, 0.1);
   }
 }

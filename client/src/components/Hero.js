@@ -1,16 +1,33 @@
-// components/Hero.js
-function Hero() {
+import React from "react";
+import "./Hero.css";
+const Hero = () => {
   return (
-    <section className="bg-light py-5 text-center">
-      <div className="container">
-        <h1 className="display-4">Welcome to CVA Multi Services</h1>
-        <p className="lead mb-4">
-          Your trusted partner for logistics, procurement, and general contracting in Nigeria.
+    <section className="hero">
+      <div className="hero-content">
+        <h4>LET US HELP YOU</h4>
+        <h1>
+          GROW YOUR <span>BUSINESS</span>
+        </h1>
+        <p>
+          We are a diversified Nigerian company driving sustainable growth
+          through agriculture, food processing, construction, logistics, and
+          capacity development.
         </p>
-        <a href="/services" className="btn btn-primary btn-lg">Explore Our Services</a>
+
+        <div className="buttons">
+          <button className="contact">Contact Us</button>
+          <button className="learn">Learn More</button>
+        </div>
+      </div>
+      <div className="hero-image">
+        <img
+          src="/assets/hero-image1.png"
+          alt="Hero Illustration"
+          style={{ width: "25.55rem", display:"block"}}
+        />
       </div>
     </section>
   );
-}
+};
 
 export default Hero;

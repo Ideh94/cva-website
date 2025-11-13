@@ -1,0 +1,290 @@
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #fff;
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* About Section */
+
+.about-section {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFF8E1;
+  font-family: "Lato", sans-serif;
+  padding: 1rem 2rem;
+}
+
+.about-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #004d8c;
+
+}
+.about-overlay .background-circle {
+  position: absolute;
+  background-color:#E4E1D7;
+  clip-path: circle(26% at 50% 50%);
+  width: 30rem;
+  height: 60rem;
+}
+.about-overlay h2 {
+  position: relative;
+  top: 5px;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  z-index: 10;
+}
+
+.about-overlay .underline {
+  position: relative;
+  top:-0.625rem;
+  width: 10rem;
+  height: 4px;
+  background-color: #b26b2f;
+  margin: 0 auto 2rem;
+  border-radius: 2px;
+}
+
+.about-card {
+  position: relative;
+  top: -0.625rem;
+  z-index: 10;
+  background-color: #01612B;
+  max-width: 700px;
+  padding: 2rem;
+  margin: 0 auto;
+  color: #ffffff;
+  border-radius: 8px;
+  line-height: 1.6;
+  font-size: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-card strong {
+  color: #ffdd57;
+}
+
+.about-card a {
+  color: #ffdd57;
+  text-decoration: underline;
+}
+.about-card a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Our Businesses Section */
+
+
+.our-businesses-section p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.6;
+}
+
+.our-businesses-section strong {
+  color: #b26b2f;
+}
+.our-businesses-section a {
+  color: #b26b2f;
+  text-decoration: underline;
+}
+.our-businesses-section a:hover {
+  color: #004d8c;
+  text-decoration: none;
+  width: 300px;
+}
+
+.our-businesses-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background-color: rgba(255, 247, 214, 0.10);
+  text-align: center;
+}
+.our-businesses-overlay h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #004d8c;
+  font-weight: 700;
+}
+.our-businesses-underline {
+  background-color: #b26b2f;
+  margin-bottom: 2rem;
+  width: 8rem;
+}
+.business-cards-container {
+ display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.5rem;
+    margin-top: 3rem;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.business-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  height: 24.738rem;
+  min-height: 300px;
+  padding: 1.5em 2em;
+  box-sizing: border-box;
+  text-align: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.business-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.business-card h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #004d8c;
+}
+.business-card p {
+  font-size: 0.95rem;
+  color: #555555;
+  line-height: 1.4;
+}
+.businesses-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 1rem;
+  color: #333333;
+  margin-top: 3rem;
+  font-weight: 600;
+
+}
+.businesses-cta a {
+  color: #b26b2f;
+}
+.businesses-cta a:hover {
+  color: #d9a21b;
+  text-decoration: none;
+}
+.businesses-cta .arrow-icon {
+  font-size: 1.5rem;
+  color: #b26b2f;
+  transition: color 0.3s ease;
+}
+
+/* Projects Section */
+
+.Products-section{
+  background-color: #F1F1E6;
+  text-align: center;
+}
+
+.Products-section p{
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.6;
+}
+.Products-section strong {
+  color: #b26b2f;
+}
+.Products-section a{
+  color: #b26b2f;
+  text-decoration: underline;
+}
+.Products-section a:hover{
+  color: #004d8c;
+  text-decoration: none;
+}
+.Products-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+ .rounded-background {
+  border-radius: 12px;
+  width: 75rem;
+  height: 200px;
+  background-color: #707788;
+  clip-path: circle(35% at 49% 0);
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.Products-overlay h2 {
+  position: relative;
+  top:-8rem;
+  color: #fff;
+  font-size: 2rem;
+
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.Products-overlay .underline {
+  position: relative;
+  top:-8rem;
+  width: 80px;
+  height: 4px;
+  background-color: #fff;
+  margin-bottom: 2rem;
+}
+
+.products-cards-container{
+  padding: 0px 40px;
+  margin: 0px 20px;
+  display: flex;
+  position: relative;
+    top: -8rem;
+  background-color: #F4F9FF;
+  height: 433px;
+  border-radius: 8px;
+}
+
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .about-card {
+    padding: 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .about-overlay h2 {
+    font-size: 1.6rem;
+  }
+
+  .underline {
+    width: 60px;
+    height: 3px;
+  }
+  .business-card {
+    width: 100%;
+    height: auto;
+  }
+}

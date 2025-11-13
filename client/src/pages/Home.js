@@ -1,242 +1,112 @@
-import { useState, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { homeStyles as s, homeAnimations } from "../constants/homeStyles";
+import React from "react";
+import "./Home.css";
+import Hero from "../components/Hero";
 
-AOS.init({
-  duration: 1000,
-  once: true,
-});
-
-
-// ====== Data Constants ======
-const features = [
-  { icon: "", title: "Fish Production" },
-  { icon: "", title: "Rice Farming" },
-  { icon: "", title: "Processing & Packaging" },
-
-];
-
-const newsPosts = [
-  {
-    title: '5 Ways Technology Is Transforming Agriculture',
-    text: 'Discover how smart platforms and traceability tools are revolutionizing the agri-value chain across Nigeria.'
-  },
-  {
-    title: 'Why Hybrid Distribution Is the Future',
-    text: 'Learn how CVA\'s hybrid logistics model empowers both manufacturers and retailers for nationwide reach.'
-  },
-  {
-    title: 'Training Farmers for Digital Age',
-    text: 'Explore how CVA’s workshops prepare farmers for technology-enabled farming and smarter delivery systems.'
-  },
-];
-
-const testimonialsData = [
-  { text: "CVA helped us scale distribution across 3 states...", author: "GreenFarm Ltd.", avatar: "https://randomuser.me/api/portraits/men/45.jpg" },
-  { text: "Their consulting team revolutionized our aquaculture system...", author: "RiverFresh Farms", avatar: "https://randomuser.me/api/portraits/women/65.jpg" },
-  { text: "Thanks to CVA’s platform, we now manage logistics...", author: "AquaGrow Nigeria", avatar: "https://randomuser.me/api/portraits/men/33.jpg" },
-  { text: "CVA’s hybrid logistics solutions have streamlined...", author: "AgroMax Ltd.", avatar: "https://randomuser.me/api/portraits/men/22.jpg" },
-];
-
-// ====== Home Component ======
-function Home() {
-  const [ctaHover, setCtaHover] = useState(false);
-  const [featureHover, setFeatureHover] = useState({});
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
+const Home = () => {
   return (
-    <div style={s.container}>
-      {/* Inject animations */}
-      <style>{homeAnimations}</style>
+    <div className="home-page">
+      <Hero />
+      <section className="about-section">
+        <div className="about-overlay">
+          <div className="background-circle"></div>
+          <h2>Who we are</h2>
+          <div className="underline"></div>
 
-      {/* Hero Section */}
-      <section style={s.hero}>
-        <div style={s.heroBackground}></div>
-        <div style={s.heroContent}>
-          <h1 style={s.heroTitle}>
-            Welcome to <span style={s.heroAccentText}>CVA Group</span>
-          </h1>
-          <p style={s.heroParagraph}>
-            A diversified Nigerian company dedicated to meeting the needs of individuals and businesses through value-added products and services.
-          </p>
-          <a
-            href="/contact"
-            style={{ ...s.heroCTAone.base, ...(ctaHover ? s.heroCTAone.hover : {}) }}
-            onMouseEnter={() => setCtaHover(true)}
-            onMouseLeave={() => setCtaHover(false)}
-          >
-            Contact Us
-          </a>
-          <a
-            href="/about"
-            style={{ ...s.heroCTAtwo.base, ...(ctaHover ? s.heroCTAtwo.hover : {}) }}
-            onMouseEnter={() => setCtaHover(true)}
-            onMouseLeave={() => setCtaHover(false)}
-          >
-            Learn more
-          </a>
-        </div>
-        <div style={s.heroFadeBottom}></div>
-      </section>
-
-      {/* About Section */}
-      <section style={s.aboutSection} >
-        <h2 style={s.sectionTitle} >Who we are</h2>
-        {/* Section Divider */}
-        <div style={s.sectionDivider}></div>
-        <p style={s.aboutText} data-aos="fade-up">
-          We offer integrated services in agriculture, logistics, technology, and business consulting to empower producers, distributors, and consumers across Nigeria.
-        </p>
-        <a href="/about" style={s.aboutLink} >Read More →</a>
-      </section>
-
-      {/* Our Businesses */}
-      <section style={s.ourbusinessesSection}>
-        <h2 style={s.sectionTitle}>Our Businesses</h2>
-        <div style={s.sectionDivider}></div>
-        <p style={s.ourbusinessesText} data-aos="fade-up">
-          As a diversified company, our interest in multiple industries indicates our determination to cater to our vision of providing locally and affordable products and services.
-        </p>
-      </section>
-
-
-      {/* Features Section */}
-      <section style={s.featuresSection}>
-        <div style={s.featureList}>
-          {features.map((item, i) => (
-            <div
-              key={i}
-              style={{ ...s.featureItem.base, ...(featureHover[i] ? s.featureItem.hover : {}) }}
-              onMouseEnter={() => setFeatureHover({ ...featureHover, [i]: true })}
-              onMouseLeave={() => setFeatureHover({ ...featureHover, [i]: false })}
-            >
-              <div style={s.featureIcon}>{item.icon}</div>
-              <h3 style={s.featureTitle}>{item.title}</h3>
-              <p style={s.featureText}>{item.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <TestimonialsCarousel testimonials={testimonialsData} />
-
-      {/* News Section */}
-      <section style={s.blogSection}>
-        <h2 style={s.blogSectionTitle}>Latest News</h2>
-
-        {/* Section Divider */}
-        <div style={s.sectionDivider}></div>
-
-        <div style={s.blogListResponsive(windowWidth)}>
-          {newsPosts.map((post, index) => (
-            <div key={index} style={s.blogPostCard}>
-              {post.image && (
-                <img src={post.image} alt={post.title} style={s.blogPostImage} />
-              )}
-              <h3 style={s.blogPostTitle}>{post.title}</h3>
-              <p style={s.blogPostText}>{post.text}</p>
-              <a href="/blog" style={s.blogPostLink}>Read More →</a>
-            </div>
-          ))}
-        </div>
-      </section>
-
-    </div>
-  );
-}
-
-// ====== Testimonials Carousel Component ======
-function TestimonialsCarousel({ testimonials }) {
-  const [current, setCurrent] = useState(0);
-  const [paused, setPaused] = useState(false);
-  const [itemsPerView, setItemsPerView] = useState(window.innerWidth < 768 ? 1 : 2);
-
-  useEffect(() => {
-    const handleResize = () => setItemsPerView(window.innerWidth < 768 ? 1 : 2);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
-    if (paused) return;
-    const timer = setInterval(() => setCurrent((prev) => (prev + 1) % testimonials.length), 5000);
-    return () => clearInterval(timer);
-  }, [paused, testimonials.length]);
-
-  const prevTestimonial = () => setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  const nextTestimonial = () => setCurrent((prev) => (prev + 1) % testimonials.length);
-
-  return (
-    <div
-      style={s.testimonialsContainer}
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-    >
-      <h2 style={s.sectionTitle}>Products</h2>
-      <div style={s.sectionDivider}></div>
-
-      {/* Buttons */}
-      <button
-        onClick={prevTestimonial}
-        style={{ ...s.testimonialButton.base, ...s.testimonialButton.left }}
-        onMouseEnter={(e) => Object.assign(e.currentTarget.style, s.testimonialButton.hover)}
-        onMouseLeave={(e) => Object.assign(e.currentTarget.style, s.testimonialButton.base)}
-      >
-        ◀
-      </button>
-
-      <button
-        onClick={nextTestimonial}
-        style={{ ...s.testimonialButton.base, ...s.testimonialButton.right }}
-        onMouseEnter={(e) => Object.assign(e.currentTarget.style, s.testimonialButton.hover)}
-        onMouseLeave={(e) => Object.assign(e.currentTarget.style, s.testimonialButton.base)}
-      >
-        ▶
-      </button>
-
-
-      <div
-        style={{
-          ...s.testimonialSlider,
-          transform: `translateX(-${current * (100 / itemsPerView)}%)`,
-        }}
-      >
-        {testimonials.map((t, index) => (
-          <div
-            key={index}
-            style={{ ...s.testimonialCard.base, flex: `0 0 ${100 / itemsPerView}%` }}
-          >
-            <img src={t.avatar} alt={t.author} style={s.testimonialAvatar} />
-            <p style={s.testimonialText}>“{t.text}”</p>
-            <h4 style={s.testimonialAuthor}>{t.author}</h4>
+          <div className="about-card">
+            <p>
+              CVA Group is a dynamic Nigerian enterprise dedicated to meeting the
+              essential needs of individuals, families, and businesses. We operate
+              across multiple sectors — from fish production and rice farming to
+              construction, logistics, and training — all with one purpose: to
+              strengthen local value chains, create jobs, and foster community
+              development.
+            </p>
           </div>
-        ))}
-      </div>
+        </div>
+      </section>
+      <section className="our-businesses-section">
+        <div className="our-businesses-overlay">
+          
+          <h2>Our Businesses</h2>
+          <div className="our-businesses-underline"></div>
+          <div className="business-cards-container">
+            <div className="business-card">
+              <img
+               src="/assets/ourbusinesses-1.png"
+               alt="Fish Farming"
+               style={{width: "100%", height: "11.25rem"}}
+               />
+              <h3>Fish Farming</h3>
+              <p>
+                Supplying fresh, healthy fish through modern aquaculture.
+              </p>
+            </div>
+            <div className="business-card">
+              <img
+               src="/assets/ourbusinesses-2.png"
+               alt="Rice Farming"
+               style={{width: "100%", height: "11.25rem"}}
+               />       
+              <h3>Rice Farming</h3>
+              <p>
+                Reducing import dependence with locally grown, high-quality rice.
+              </p>
+            </div>
+            <div className="business-card">
+              <img
+               src="/assets/ourbusinesses-3.png"
+               alt="Construction" 
+               style={{width: "100%", height: "180px"}}
+               />
+              <h3>Food Processing & Packaging</h3>
+              <p>
+               Transforming raw produce into consumer-ready food products.
+              </p>
+            </div>
+            <div className="business-card">
+              <img
+               src="/assets/ourbusinesses-4.png"
+               alt="Construction"
+               style={{width: "100%", height: "11.25rem"}}
+               />
+              <h3>Construction</h3>
+              <p>
+                Building infrastructure that supports growth and development.
+              </p>
+            </div>
+          </div>
+          <div className="businesses-cta">
+            <a href="/ourbusinesses" className="learn-more-button">
+              View All Businesses
+            </a>
+            <div className="arrow-icon">&#8594;</div>
+          </div>
+        </div>
+      </section>
 
-      <div style={s.testimonialDotsContainer}>
-        {testimonials.map((_, index) => (
-          <div
-            key={index}
-            onClick={() => setCurrent(index)}
-            style={{
-              ...s.testimonialDot,
-              backgroundColor: index === current ? s.testimonialDot.activeColor : s.testimonialDot.inactiveColor,
-              cursor: "pointer",
-            }}
-          />
-        ))}
-      </div>
+      <section className="Products-section">
+        <div className="Products-overlay">
+          <div className="rounded-background"> </div>
+          <h2>Our Products</h2>
+          <div className="underline"></div>
+        </div>
+        <div className="products-cards-container">
+          <div className="product-card">
+            <img
+             src="/assets/product-1"
+             alt="product 1"/>
+            <h4>Fresh Poundo</h4>
+          </div>
+        </div>
+        <div className="products-cta">
+          <a href="/ourbusinesses" className="learn-more-button">
+            View All Products
+          </a>
+          <div className="arrow-icon">&#8594;</div>
+        </div>
+      </section>
     </div>
   );
-}
-
+};
 
 export default Home;

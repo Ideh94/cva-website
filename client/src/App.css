@@ -15,11 +15,9 @@
 }
 
 html, body, #root {
-  height: 100%;
-  width: 100%;
   background: #fff;
-  font-family: Arial, sans-serif;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 /* Container for the full page layout */

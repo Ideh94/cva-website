@@ -9,8 +9,12 @@ import About from './pages/About';
 import OurBusinesses from './pages/OurBusinesses';
 import Blog from './pages/News';
 import Contact from './pages/Contact';
-import './App.css'; // Make sure global styles are applied
-
+import './App.css';
+import React from 'react';
+import './index.css';
+import './components/Navbar.css';
+import './components/Footer.css';
+import './components/SubFooter.css';
 
 Object.entries(theme.colors).forEach(([key, value]) => {
   if (typeof value === "string") {
@@ -23,24 +27,19 @@ Object.entries(theme.colors).forEach(([key, value]) => {
 });
 
 
-
 function App() {
   return (
     <Router>
-      <div className="app-container">
-        <Navbar />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/ourbusinesses" element={<OurBusinesses />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-        <SubFooter />
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/ourbusinesses" element={<OurBusinesses />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <SubFooter />
+      <Footer />
     </Router>
   );
 }
