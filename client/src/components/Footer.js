@@ -38,13 +38,25 @@ function Footer() {
           <p><strong>Phone:</strong> +234 703 810 0100</p>
           <p><strong>Address:</strong> Plot 4, Iwofe Road, Rivers State, Nigeria</p>
         </div>
+
+        <div className="footer-section">
+          <h4>Follow Us</h4>
+          <div className="social-links">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-link">
+              <span className="social-icon">f</span> Facebook
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-link">
+              <span className="social-icon">📷</span> Instagram
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="social-link">
+              <span className="social-icon">x</span> X (Twitter)
+            </a>
+          </div>
+        </div>
       </div>
 
       <div className="footer-divider"></div>
       
-      <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} CVA Multi Services Nigeria Ltd. All rights reserved.</p>
-      </div>
     </footer>
   );
 }

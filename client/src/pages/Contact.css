@@ -42,3 +42,27 @@
 .contact-form button:hover {
   background-color: #0055aa;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 40px 20px;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+}

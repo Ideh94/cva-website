@@ -28,3 +28,19 @@
     color: #003366;
     margin-bottom: 10px;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-page {
+    padding: 40px 20px;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .faq-card {
+    padding: 15px;
+  }
+}

@@ -1,31 +1,45 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from "react";
+import "./News.css";
 
 function News() {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    (async () => await axios.get('http://localhost:5000/api/news/blog')
-      .then(res => setPosts(res.data.articles || []))
-      .catch(err => console.error(err)))();
-  }, []);
+  const news = [
+    {
+      title: "5 Ways Technology Is Transforming Agriculture",
+      text: "Discover how smart platforms and traceability tools are revolutionizing the agri-value chain across Nigeria.",
+      link: "#",
+    },
+    {
+      title: "Why Hybrid Distribution Is the Future",
+      text: "Learn how CVA's hybrid logistics model empowers both manufacturers and retailers for nationwide reach.",
+      link: "#",
+    },
+    {
+      title: "Training Farmers for Digital Age",
+      text: "Explore how CVA’s workshops prepare farmers for technology-enabled farming and smarter delivery systems.",
+      link: "#",
+    },
+  ];
 
   return (
-    <div className="news">
-      <h1>Latest News</h1>
-      {posts.map(({ title, publishedAt, url, description, urlToImage }, index) => (
-        <div key={index} className="news-post">
-          <h2>{title}</h2>
-          <p><em>{new Date(publishedAt).toLocaleDateString()}</em></p>
-          <p>{description}</p>
-          {urlToImage && <img src={urlToImage} alt={description} width={200} height={200} style={{ background: "gray", maxWidth: "100%", height: "auto" }} />}
-          <br />
-          <a href={url} target="_blank" rel="noopener noreferrer">Read full article</a>
-          <hr />
-        </div>
-      ))}
-    </div>
+    <section className="news-wrapper">
+      <h2 className="news-heading">Latest News</h2>
+      <div className="news-underline" />
+
+      <div className="news-grid">
+        {news.map((item, id) => (
+          <article key={id} className="news-card">
+            <div className="news-card-inner">
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+
+              <a className="read-more" href={item.link}>
+                Read more →
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
   );
 }
-
 export default News;

@@ -12,3 +12,16 @@
   margin: 0;
   line-height: 1.6;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .subfooter {
+    padding: 10px 5px;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .subfooter p {
+    font-size: 0.8rem;
+  }
+}

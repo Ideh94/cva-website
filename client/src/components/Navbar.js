@@ -21,10 +21,13 @@ function Navbar() {
         </Link>
         
         <button
-          className="hamburger"
+          className={`hamburger ${isOpen ? 'active' : ''}`}
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
         >
-          ☰
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
         </button>
 
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>

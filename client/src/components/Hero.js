@@ -1,5 +1,8 @@
 import React from "react";
 import "./Hero.css";
+import HeroImage from "../assets/images/hero-image1.png";
+import { Link } from "react-router-dom";
+
 const Hero = () => {
   return (
     <section className="hero">
@@ -15,13 +18,17 @@ const Hero = () => {
         </p>
 
         <div className="buttons">
-          <button className="contact">Contact Us</button>
-          <button className="learn">Learn More</button>
+          <Link to="/contact">
+            <button className="contact">Contact Us</button>
+          </Link>
+          <Link to="/about">
+            <button className="learn">Learn More</button>
+          </Link>
         </div>
       </div>
       <div className="hero-image">
         <img
-          src="/assets/hero-image1.png"
+          src={HeroImage}
           alt="Hero Illustration"
           style={{ width: "25.55rem", display:"block"}}
         />

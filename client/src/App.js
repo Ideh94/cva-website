@@ -38,8 +38,8 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <SubFooter />
       <Footer />
+      <SubFooter />
     </Router>
   );
 }

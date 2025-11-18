@@ -1,2 +1,24 @@
 @import "tailwindcss/preflight";
 @tailwind utilities;
+
+/* Responsive Design */
+
+/* Large screens (desktops) */
+@media (min-width: 1200px) {
+  /* Custom styles for large screens */
+}
+
+/* Medium screens (tablets and small desktops) */
+@media (min-width: 769px) and (max-width: 1199px) {
+  /* Custom styles for medium screens */
+}
+
+/* Small screens (tablets) */
+@media (max-width: 768px) {
+  /* Custom styles for small screens */
+}
+
+/* Extra small screens (large phones) */
+@media (max-width: 480px) {
+  /* Custom styles for extra small screens */
+}

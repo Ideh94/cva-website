@@ -1,8 +1,17 @@
 import React from "react";
 import "./Home.css";
 import Hero from "../components/Hero";
-
+import FishFarming from "../assets/images/ourbusinesses-1.png";
+import RiceFarming from "../assets/images/ourbusinesses-2.png";
+import FoodProcessing from "../assets/images/ourbusinesses-3.png";
+import Construction from "../assets/images/ourbusinesses-4.png";
+import Testimonials from "../components/Testimonials";
+import News from "./News";
+import Products from "../components/Products";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="home-page">
       <Hero />
@@ -26,13 +35,13 @@ const Home = () => {
       </section>
       <section className="our-businesses-section">
         <div className="our-businesses-overlay">
-          
+
           <h2>Our Businesses</h2>
-          <div className="our-businesses-underline"></div>
+          <div className="underline"></div>
           <div className="business-cards-container">
             <div className="business-card">
               <img
-               src="/assets/ourbusinesses-1.png"
+               src={FishFarming}
                alt="Fish Farming"
                style={{width: "100%", height: "11.25rem"}}
                />
@@ -43,7 +52,7 @@ const Home = () => {
             </div>
             <div className="business-card">
               <img
-               src="/assets/ourbusinesses-2.png"
+               src={RiceFarming}
                alt="Rice Farming"
                style={{width: "100%", height: "11.25rem"}}
                />       
@@ -54,7 +63,7 @@ const Home = () => {
             </div>
             <div className="business-card">
               <img
-               src="/assets/ourbusinesses-3.png"
+               src={FoodProcessing}
                alt="Construction" 
                style={{width: "100%", height: "180px"}}
                />
@@ -65,7 +74,7 @@ const Home = () => {
             </div>
             <div className="business-card">
               <img
-               src="/assets/ourbusinesses-4.png"
+               src={Construction}
                alt="Construction"
                style={{width: "100%", height: "11.25rem"}}
                />
@@ -84,25 +93,21 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="Products-section">
-        <div className="Products-overlay">
-          <div className="rounded-background"> </div>
-          <h2>Our Products</h2>
-          <div className="underline"></div>
-        </div>
-        <div className="products-cards-container">
-          <div className="product-card">
-            <img
-             src="/assets/product-1"
-             alt="product 1"/>
-            <h4>Fresh Poundo</h4>
+      <Products />
+      <Testimonials />
+      <News />
+      <section className="contact-section">
+        <div className="contact-overlay">
+          <h2>Partner with CVA Group</h2>
+          <p className="contact-paragraph">
+            Together, we can build sustainable solutions that empower
+            communities and drive economic growth across Nigeria.
+          </p>
+          <div className="contact-cta" onClick={() => navigate("/contact")}>
+            <a href="/contact" className="contact-button">
+              Contact Us
+            </a>
           </div>
-        </div>
-        <div className="products-cta">
-          <a href="/ourbusinesses" className="learn-more-button">
-            View All Products
-          </a>
-          <div className="arrow-icon">&#8594;</div>
         </div>
       </section>
     </div>
