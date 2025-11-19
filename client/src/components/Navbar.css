@@ -114,6 +114,7 @@
 
 /* Mobile responsive */
 @media (max-width: 768px) {
+  
   .hamburger {
     display: block;
   }
@@ -123,7 +124,7 @@
     top: 60px;
     left: 0;
     width: 100%;
-    background-color: #01612B;
+    background-color: var(--white);
     flex-direction: column;
     gap: 0;
     padding: 0;
@@ -143,7 +144,6 @@
 
   .nav-menu a {
     border-bottom: none;
-    color: #ffffff;
   }
 
   .navbar-container {
@@ -152,6 +152,6 @@
 
   .nav-menu a.active {
     border-bottom: none;
-    background-color: rgba(245, 158, 11, 0.1);
+    color: #F59E0B;
   }
 }

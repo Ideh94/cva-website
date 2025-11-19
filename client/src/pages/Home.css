@@ -65,13 +65,13 @@ body {
   position: relative;
   z-index: 10;
   background-color: var(--accent-orange);
-  max-width: 87.5rem;
+  max-width: 90rem;
   padding: var(--spacing-xl);
   margin: 0 auto;
   color: var(--white);
   border-radius: 12px;
   line-height: 1.6;
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-md);
   box-shadow: 0 12px 32px rgba(245, 158, 11, 0.10);
   text-align: left;
 }
