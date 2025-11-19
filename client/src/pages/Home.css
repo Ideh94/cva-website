@@ -64,7 +64,7 @@ body {
 .about-card {
   position: relative;
   z-index: 10;
-  background-color: var(--primary-green);
+  background-color: var(--primary-blue);
   max-width: 700px;
   padding: var(--spacing-xl);
   margin: 0 auto;
