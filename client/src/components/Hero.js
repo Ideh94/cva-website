@@ -1,6 +1,5 @@
 import React from "react";
 import "./Hero.css";
-import HeroImage from "../assets/images/hero-image1.png";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -26,13 +25,7 @@ const Hero = () => {
           </Link>
         </div>
       </div>
-      <div className="hero-image">
-        <img
-          src={HeroImage}
-          alt="Hero Illustration"
-          style={{ width: "25.55rem", display:"block"}}
-        />
-      </div>
+      
     </section>
   );
 };
