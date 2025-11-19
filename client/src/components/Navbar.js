@@ -29,14 +29,15 @@ function Navbar() {
           <span className="hamburger-line"></span>
           <span className="hamburger-line"></span>
         </button>
-
-        <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
-          <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
-          <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About Us</Link></li>
-          <li><Link to="/ourbusinesses" className={location.pathname === '/ourbusinesses' ? 'active' : ''}>Our Businesses</Link></li>
-          <li><Link to="/blog" className={location.pathname === '/blog' ? 'active' : ''}>News</Link></li>
-          <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link></li>
-        </ul>
+        <span className='navbar-links-container'>
+          <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
+            <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
+            <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About Us</Link></li>
+            <li><Link to="/ourbusinesses" className={location.pathname === '/ourbusinesses' ? 'active' : ''}>Our Businesses</Link></li>
+            <li><Link to="/blog" className={location.pathname === '/blog' ? 'active' : ''}>News</Link></li>
+            <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link></li>
+          </ul>
+        </span>
       </div>
     </nav>
   );

@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="hero-content">
         <h4>LET US HELP YOU</h4>
         <h1>
-          GROW YOUR <span>BUSINESS</span>
+          Welcome to <span>CVA Group</span>
         </h1>
         <p>
           We are a diversified Nigerian company driving sustainable growth
