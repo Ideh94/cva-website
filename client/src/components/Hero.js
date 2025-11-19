@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-content">
-        <h4>LET US HELP YOU</h4>
+        
         <h1>
           Welcome to <span>CVA Group</span>
         </h1>

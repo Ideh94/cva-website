@@ -17,7 +17,7 @@ const Home = () => {
       <Hero />
       <section className="about-section">
         <div className="about-overlay">
-          <div className="background-circle"></div>
+         
           <h2>Who we are</h2>
           <div className="underline"></div>
 

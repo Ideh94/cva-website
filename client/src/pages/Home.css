@@ -18,7 +18,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-light);
+  background: var(--white);
   padding: var(--spacing-xl) var(--spacing-lg);
   margin-bottom: var(--spacing-xl);
 }
@@ -64,15 +64,15 @@ body {
 .about-card {
   position: relative;
   z-index: 10;
-  background-color: var(--primary-blue);
-  max-width: 700px;
+  background-color: var(--accent-orange);
+  max-width: 87.5rem;
   padding: var(--spacing-xl);
   margin: 0 auto;
   color: var(--white);
   border-radius: 12px;
   line-height: 1.6;
   font-size: var(--font-size-sm);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 32px rgba(245, 158, 11, 0.10);
   text-align: left;
 }
 
