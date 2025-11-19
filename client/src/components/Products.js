@@ -8,8 +8,8 @@ import Product5 from "../assets/images/products-5.png";
 
 const Products = () => {
   return (
-    <section className="Products-section">
-      <div className="Products-overlay">
+    <section className="products-section">
+      <div className="products-overlay">
         <h2>Our Products</h2>
         <div className="underline"></div>
       </div>

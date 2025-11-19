@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import SubFooter from './components/SubFooter';
 import Home from './pages/Home';
 import About from './pages/About';
-import OurBusinesses from './pages/OurBusinesses';
+import OurBusinesses from './components/OurBusinesses';
 import Blog from './pages/News';
 import Contact from './pages/Contact';
 import './App.css';

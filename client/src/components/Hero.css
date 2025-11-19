@@ -4,10 +4,10 @@
   align-items: center;
   justify-content: center;
   font-family: 'Lato', sans-serif;
-  background: #FFF8E4;
+  background: #f7f2e7;
   height: 100vh;
   width: 100%;
-  box-sizing: border-box;
+    box-sizing: border-box;
   position: relative;
   overflow: hidden;
 }
