@@ -6,6 +6,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-section">
+         
           <h3>CVA Group</h3>
           <p>A diversified Nigerian company driving sustainable growth through agriculture, food processing, construction, logistics, and capacity development.</p>
         </div>
