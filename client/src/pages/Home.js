@@ -5,9 +5,8 @@ import Testimonials from "../components/Testimonials";
 import News from "./News";
 import Products from "../components/Products";
 import Business from "../components/OurBusinesses.jsx"
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Home = () => {
-  const navigate = useNavigate();
 
   return (
     <div className="home-page">
@@ -41,11 +40,11 @@ const Home = () => {
             Together, we can build sustainable solutions that empower
             communities and drive economic growth across Nigeria.
           </p>
-          <div className="contact-cta" onClick={() => navigate("/contact")}>
-            <a href="/contact" className="contact-button">
+          
+            <Link to="/contact" className="contact-button">
               Contact Us
-            </a>
-          </div>
+            </Link>
+          
         </div>
       </section>
     </div>

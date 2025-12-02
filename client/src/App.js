@@ -15,6 +15,7 @@ import './index.css';
 import './components/Navbar.css';
 import './components/Footer.css';
 import './components/SubFooter.css';
+import './components/Buttons.css';
 
 Object.entries(theme.colors).forEach(([key, value]) => {
   if (typeof value === "string") {

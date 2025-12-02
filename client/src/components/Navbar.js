@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import { Link, useLocation } from 'react-router-dom';
+import Logo from '../assets/icons/Logo-light.svg';
 
 function Navbar() {
   const location = useLocation();
@@ -16,9 +17,10 @@ function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">                              
-          CVA
-        </Link>
+        <a href="/" className="navbar-logo">
+          <img src={Logo} alt="CVA Logo" className="logo-image" />
+          <span className="logo-text">CVA</span>
+        </a>
         
         <button
           className={`hamburger ${isOpen ? 'active' : ''}`}

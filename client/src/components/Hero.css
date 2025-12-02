@@ -3,40 +3,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Lato', sans-serif;
-  background: #f7f2e7;
-  height: 100vh;
-  width: 100%;
-    box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
+  background: #005599;
+  padding: 200px 20px;
 }
 .hero-content{
   width: 100%;
-  height: 100vh;
-  padding: 0px 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #005599;
   box-sizing: border-box;
   text-align: center;
+
 }
 
-.hero-content h4 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #e3e3e3;
-}
+
 
 .hero-content h1 {
-  font-size: 4.5rem;
-  font-weight: 800;
+  font-size: 2.5rem;
   line-height: 1.2;
-  margin-bottom: 2rem;
-  font-family: "Lato", sans-serif;
   color: #e3e3e3;
 }
 
@@ -45,14 +30,14 @@
 }
 
 .hero-content p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   max-width: 50rem;
   color: #e3e3e3;
 }
 
 .buttons {
-  margin-top: 30px;
+  margin-top: 1.2rem;
   display: flex;
   gap: 20px;
 }
@@ -88,44 +73,27 @@ button.learn:hover {
   color: #0b3d0b;
 }
 
-.hero-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 20px;
-}
 
-.hero-image img {
-  max-width: 37.5rem;
-  object-fit: contain;
-}
+
+
 
 @media (max-width: 768px) {
   .hero {
     display: flex;
     flex-direction: column-reverse;
     height: auto;
-    min-height: 100vh;
   }
 
   .hero-content {
     position: static;
     display: flex;
     flex-direction: column;
-    background-color: #005599;
-    padding: 40px 20px;
-    clip-path: none;
+    padding: 0.5rem 1.25rem;
     width: 100%;
     text-align: center;
   }
 
-  .hero-content h4 {
-    font-size: 0.9rem;
-    top: auto;
-    left: auto;
-    position: static;
-  }
+ 
 
   .hero-content h1 {
     font-size: 2rem;
@@ -139,16 +107,8 @@ button.learn:hover {
     padding: 0 10px;
   }
 
-  .hero-image {
-    order: -1;
-    padding: 20px;
-  }
 
-  .hero-image img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-  }
+
 
   .buttons {
     flex-direction: column;
@@ -168,9 +128,5 @@ button.learn:hover {
 
   .hero-content p {
     font-size: 0.9rem;
-  }
-
-  .hero-image img {
-    max-width: 250px;
   }
 }

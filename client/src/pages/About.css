@@ -11,12 +11,13 @@
 
 .about-hero h1 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .about-hero p {
     font-size: 1.2rem;
-    max-width: 800px;
+    line-height: 1.6rem;
+    max-width: 50rem;
     margin: auto;
 }
 

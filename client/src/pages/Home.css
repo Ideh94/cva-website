@@ -102,7 +102,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 16px
+  gap: 16px;
 }
 
 .contact-overlay h2{
@@ -114,7 +114,7 @@ body {
   width: 604px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.contact-cta {
+.contact-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -209,7 +209,7 @@ body {
     padding: 0 20px;
   }
 
-  .contact-cta {
+  .contact-button {
     width: 100%;
     max-width: 300px;
   }
@@ -258,7 +258,7 @@ body {
     font-size: 1.8rem;
   }
 
-  .contact-cta {
+  .contact-button {
     padding: 15px;
     font-size: 0.9rem;
   }

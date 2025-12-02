@@ -1,0 +1,145 @@
+/* Consistent Button Styles */
+.cta-button,
+.contact-button,
+.learn-more-button,
+.products-cta,
+.hero .buttons button {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-semibold);
+  font-family: var(--font-family);
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+  letter-spacing: 0.025em;
+  line-height: 1.5;
+}
+
+/* Primary Button (Filled) - General Use */
+.cta-button,
+.contact-button {
+  background: #005599;
+  color: #ffffff;
+  border-color: #005599;
+}
+
+.cta-button:hover,
+.contact-button:hover {
+  background: #00447a;
+  border-color: #00447a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 85, 153, 0.3);
+}
+
+/* Hero Section Buttons - Keep Original Orange */
+.hero .buttons .contact {
+  background: var(--accent-orange);
+  color: #ffffff;
+  border-color: var(--accent-orange);
+}
+
+.hero .buttons .contact:hover {
+  background: var(--accent-brown);
+  border-color: var(--accent-brown);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
+}
+
+/* Secondary Button (Outline) */
+.learn-more-button,
+.products-cta,
+.hero .buttons .learn {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.learn-more-button:hover,
+.products-cta:hover,
+.hero .buttons .learn:hover {
+  background: #ffffff;
+  color: var(--primary-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Button on light backgrounds */
+.products-cta {
+  color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+.products-cta:hover {
+  background: var(--primary-blue);
+  color: #ffffff;
+}
+
+/* Button with icons */
+.cta-button .arrow-icon,
+.products-cta .arrow-icon,
+.learn-more-button .arrow-icon {
+  display: inline-block;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover .arrow-icon,
+.products-cta:hover .arrow-icon,
+.learn-more-button:hover .arrow-icon {
+  transform: translateX(0.25rem);
+}
+
+/* Button sizes */
+.cta-button.btn-large,
+.contact-button.btn-large {
+  padding: 1.125rem 2.5rem;
+  font-size: var(--font-size-lg);
+}
+
+.cta-button.btn-small,
+.contact-button.btn-small {
+  padding: 0.625rem 1.5rem;
+  font-size: var(--font-size-sm);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cta-button,
+  .contact-button,
+  .learn-more-button,
+  .products-cta,
+  .hero .buttons button {
+    padding: 0.75rem 1.5rem;
+    font-size: var(--font-size-sm);
+  }
+
+  .cta-button.btn-large,
+  .contact-button.btn-large {
+    padding: 1rem 2rem;
+    font-size: var(--font-size-base);
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-button,
+  .contact-button,
+  .learn-more-button,
+  .products-cta,
+  .hero .buttons button {
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+  }
+
+  .hero .buttons {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .hero .buttons button {
+    width: 100%;
+  }
+}
