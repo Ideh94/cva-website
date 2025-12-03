@@ -19,21 +19,8 @@
   line-height: 1.5;
 }
 
-/* Primary Button (Filled) - General Use */
-.cta-button,
-.contact-button {
-  background: #005599;
-  color: #ffffff;
-  border-color: #005599;
-}
 
-.cta-button:hover,
-.contact-button:hover {
-  background: #00447a;
-  border-color: #00447a;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 85, 153, 0.3);
-}
+
 
 /* Hero Section Buttons - Keep Original Orange */
 .hero .buttons .contact {
@@ -67,11 +54,7 @@
   box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
 }
 
-/* Button on light backgrounds */
-.products-cta {
-  color: var(--primary-blue);
-  border-color: var(--primary-blue);
-}
+
 
 .products-cta:hover {
   background: var(--primary-blue);

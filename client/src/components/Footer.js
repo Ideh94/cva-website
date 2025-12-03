@@ -1,4 +1,7 @@
 import React from 'react';
+import Logo from '../assets/icons/cva-logo.svg';
+import { Link } from 'react-router-dom';
+import {FaFacebookF, FaInstagram, FaTwitter} from 'react-icons/fa';
 import './Footer.css';
 
 function Footer() {
@@ -6,7 +9,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-section">
-         
+          <img src={Logo} alt="CVA Logo" style={{ width: '100px', height: '100px' }}/>
           <h3>CVA Group</h3>
           <p>A diversified Nigerian company driving sustainable growth through agriculture, food processing, construction, logistics, and capacity development.</p>
         </div>
@@ -14,22 +17,22 @@ function Footer() {
         <div className="footer-section">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/ourbusinesses">Our Businesses</a></li>
-            <li><a href="/blog">News</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/ourbusinesses">Our Businesses</Link></li>
+            <li><Link to="/blog">News</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
 
         <div className="footer-section">
           <h4>Our Businesses</h4>
           <ul>
-            <li>Agriculture & Farming</li>
-            <li>Food Processing</li>
-            <li>Construction</li>
-            <li>Logistics & Distribution</li>
-            <li>Capacity Development</li>
+            <li><Link to="/agriculture">Agriculture & Farming</Link></li>
+            <li><Link to="/foodprocessing">Food Processing</Link></li>
+            <li><Link to="/construction">Construction</Link></li>
+            <li><Link to="/logistics">Logistics & Distribution</Link></li>
+            <li><Link to="/capacitydevelopment">Capacity Development</Link></li>
           </ul>
         </div>
 
@@ -44,19 +47,19 @@ function Footer() {
           <h4>Follow Us</h4>
           <div className="social-links">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-link">
-              <span className="social-icon">f</span> Facebook
+              <FaFacebookF/> <span className="social-text">Facebook</span>
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-link">
-              <span className="social-icon">📷</span> Instagram
+              <FaInstagram/> <span className="social-text">Instagram</span>
             </a>
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="social-link">
-              <span className="social-icon">x</span> X (Twitter)
+              <FaTwitter/> <span className="social-text">Twitter</span>
             </a>
           </div>
         </div>
       </div>
 
-      <div className="footer-divider"></div>
+     
       
     </footer>
   );

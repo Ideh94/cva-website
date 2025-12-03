@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const AdminLoginForm = () => {
     const [email, setEmail] = useState('');
@@ -10,28 +11,20 @@ const AdminLoginForm = () => {
         e.preventDefault();
 
         try {
-            const res = await fetch('http://localhost:5000/api/admin/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email, password }),
-            });
+            const res = await axios.post('http://localhost:5000/api/admin/login', { email, password });
 
-            const data = await res.json();
-
-            if (res.ok) {
+            if (res.data.token) {
                 // ✅ Save token to localStorage
-                localStorage.setItem('adminToken', data.token);
+                localStorage.setItem('adminToken', res.data.token);
 
                 // ✅ Redirect to dashboard
                 navigate('/admin/dashboard');
             } else {
-                alert(data.message || 'Login failed');
+                alert('Login failed: No token received');
             }
         } catch (err) {
             console.error('Login error:', err);
-            alert('An error occurred during login.');
+            alert(err.response?.data?.msg || 'An error occurred during login.');
         }
     };
 

@@ -1,12 +1,15 @@
+import React from 'react';
+import { FaCheckCircle } from 'react-icons/fa';
 import './About.css';
 
 function About() {
   return (
     <div className="about-page">
       <section className="about-hero">
-        <h1>About CVA Multi Services Nig Ltd.</h1>
+        <h1>About CVA Multi Services Nig Ltd.</h1>  
         <p>Empowering Africa’s business ecosystem with traceable and scalable solutions in agriculture, logistics, and consulting.</p>
       </section>
+
 
       <section className="about-content">
         <div className="about-text">
@@ -29,10 +32,10 @@ function About() {
 
           <h2>What Makes Us Different</h2>
           <ul>
-            <li>✅ Hybrid traceable distribution networks</li>
-            <li>✅ Capacity-building and training programs</li>
-            <li>✅ Tech-enabled platforms for supply chain visibility</li>
-            <li>✅ Strong government and private sector partnerships</li>
+            <li><FaCheckCircle className="feature-icon" /> Hybrid traceable distribution networks</li>
+            <li><FaCheckCircle className="feature-icon" /> Capacity-building and training programs</li>
+            <li><FaCheckCircle className="feature-icon" /> Tech-enabled platforms for supply chain visibility</li>
+            <li><FaCheckCircle className="feature-icon" /> Strong government and private sector partnerships</li>
           </ul>
         </div>
         <section className="timeline-section">
@@ -72,9 +75,6 @@ function About() {
           </div>
         </section>
 
-        <div className="about-image">
-          <img src="/images/about-illustration.png" alt="" />
-        </div>
       </section>
     </div>
   );

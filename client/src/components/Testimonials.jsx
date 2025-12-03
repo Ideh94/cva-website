@@ -3,9 +3,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Testimonials.css";
 
-import customer1 from "../assets/images/testimonial-1.png";
-import customer2 from "../assets/images/testimonial-2.png";
-import customer3 from "../assets/images/testimonial-3.png";
+import customer1 from "../assets/images/testimonial-1.webp";
+import customer2 from "../assets/images/testimonial-2.webp";
+import customer3 from "../assets/images/testimonial-3.webp";
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -67,7 +67,6 @@ export default function Testimonials() {
         <div className="testimonials-header">
           <h2>What Our Customers Say</h2>
           <div className="underline"></div>
-          <p className="testimonials-subtitle">Don't just take our word for it</p>
         </div>
 
         <div className="testimonial-carousel">
@@ -96,6 +95,7 @@ export default function Testimonials() {
                     src={currentTestimonial.img} 
                     alt={currentTestimonial.name} 
                     className="author-image-large" 
+                    loading="lazy" 
                   />
                   <div className="image-border"></div>
                 </div>

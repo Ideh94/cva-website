@@ -4,6 +4,7 @@
   padding: 6rem 0;
   position: relative;
   overflow: hidden;
+  margin-top: var(--spacing-lg);
 }
 
 /* Animated background effects */
@@ -41,19 +42,13 @@
 
 .testimonials-header h2 {
   color: #ffffff;
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-2xl);
   font-weight: 700;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
   letter-spacing: -0.02em;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.testimonials-subtitle {
-  color: #cbd5e1;
-  font-size: var(--font-size-md);
-  font-weight: var(--font-normal);
-  margin-top: 0.5rem;
-}
 
 .testimonials-header .underline {
   width: 5rem;
@@ -84,8 +79,8 @@
     0 20px 60px rgba(0, 0, 0, 0.3),
     0 0 0 1px rgba(255, 255, 255, 0.1) inset;
   position: relative;
-  max-width: 900px;
-  margin: 0 4rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
   border: 1px solid rgba(245, 158, 11, 0.1);
   animation: slideIn 0.5s ease-out;
 }
@@ -139,7 +134,7 @@
 }
 
 .testimonial-text-large {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-md);
   line-height: 1.8;
   color: #1f2937;
   margin-bottom: 2.5rem;
@@ -153,7 +148,7 @@
   display: flex;
   align-items: center;
   gap: 2rem;
-  padding-top: 2rem;
+  padding-top: var(--spacing-lg);
   border-top: 2px solid rgba(245, 158, 11, 0.2);
 }
 
@@ -194,7 +189,7 @@
 }
 
 .author-name-large {
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-xl);
   font-weight: var(--font-bold);
   color: #111827;
   margin-bottom: 0.25rem;
@@ -203,7 +198,7 @@
 
 .author-role-large {
   font-size: var(--font-size-base);
-  color: var(--accent-orange);
+  color: var(--primary-blue);
   font-weight: var(--font-semibold);
   margin-bottom: 0.25rem;
 }
@@ -278,12 +273,14 @@
 }
 
 .carousel-button.prev {
-  left: 0;
+  left: -4rem;
 }
 
 .carousel-button.next {
-  right: 0;
+  right: -4rem;
 }
+
+
 
 /* Carousel Dots */
 .carousel-dots {
@@ -317,7 +314,10 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+  .testimonials-section {
+    padding: 4rem 0;
+  }
   .testimonial-card-large {
     margin: 0 3rem;
     padding: 2.5rem 3rem;
@@ -329,6 +329,19 @@
 
   .author-name-large {
     font-size: var(--font-size-xl);
+  }
+
+  .carousel-button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .carousel-button.prev {
+    left: -1rem;
+  }
+
+  .carousel-button.next {
+    right: -1rem;
   }
 }
 
@@ -377,21 +390,98 @@
   }
 
   .carousel-button.prev {
-    left: -0.5rem;
+    left: 0.5rem;
   }
 
   .carousel-button.next {
-    right: -0.5rem;
+    right: 0.5rem;
   }
+
+ 
 
   .quote-mark-large {
     font-size: 5rem;
   }
 }
 
+@media (max-width: 640px) {
+  .testimonial-card-large {
+    margin: 0 0.5rem;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .testimonial-text-large {
+    font-size: var(--font-size-base);
+    margin-bottom: 2rem;
+  }
+
+  .author-name-large {
+    font-size: var(--font-size-lg);
+  }
+
+  .author-role-large {
+    font-size: var(--font-size-base);
+  }
+
+  .author-company-large {
+    font-size: var(--font-size-base);
+  }
+
+  .card-decoration {
+    bottom: 1rem;
+    right: 1rem;
+    opacity: 0.1;
+  }
+
+  .decoration-circle {
+    width: 6rem;
+    height: 6rem;
+    border: 2px solid var(--accent-orange);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .decoration-dot {
+    width: 1rem;
+    height: 1rem;
+    background: var(--accent-orange);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 4rem;
+    right: 4rem;
+  }
+
+  .quote-decoration {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .quote-mark-large {
+    font-size: 4rem;
+  }
+
+  .quote-accent {
+    width: 3rem;
+    height: 0.2rem;
+    background: linear-gradient(90deg, var(--accent-orange), transparent);
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    border-radius: 2rem;
+  }
+  .carousel-button {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+}
+
 @media (max-width: 480px) {
   .testimonial-card-large {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 
   .carousel-button {
@@ -413,3 +503,4 @@
     height: 3.5rem;
   }
 }
+

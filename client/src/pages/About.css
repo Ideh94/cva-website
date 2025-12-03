@@ -3,22 +3,30 @@
 }
 
 .about-hero {
-    background-color: #005599;
-    color: white;
-    padding: 200px 20px;
+    background: var(--primary-blue);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    color: #ffffff;
 }
 
 .about-hero h1 {
     font-size: 2.5rem;
-    margin-bottom: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: var(--font-serif);
 }
 
 .about-hero p {
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-    max-width: 50rem;
-    margin: auto;
+    font-size: var(--font-size-md);
+    max-width: max-content;
+    margin: 0 auto;
+    opacity: 0.9;
 }
 
 .about-content {
@@ -37,13 +45,17 @@
 }
 
 .about-text h2 {
-    color: #003366;
+    color: var(--primary-blue);
     margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .about-text p {
-    font-size: 1.05rem;
+    font-size: var(--font-size-md);
     margin: 10px 0;
+    line-height: 1.6;
+
 }
 
 .about-text ul {
@@ -52,40 +64,28 @@
 }
 
 .about-text li {
-    margin: 10px 0;
-}
-
-.about-image {
-    flex: 1;
-    min-width: 280px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+    font-weight: 500;
+    color: var(--primary-blue);
 }
 
-.about-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-        align-items: center;
-    }
+.feature-icon {
+    color: var(--primary-green);
+    font-size: 1.25rem;
 }
 
 .timeline-section {
     padding: 60px 20px;
-    background-color: #f9f9f9;
+    background-color: #dff5f3;
     text-align: center;
 }
 
 .timeline-section h2 {
     font-size: 2rem;
-    color: #003366;
+    color: var(--primary-blue);
     margin-bottom: 40px;
 }
 
@@ -95,7 +95,7 @@
     align-items: center;
     position: relative;
     padding-left: 30px;
-    border-left: 4px solid #003366;
+    border-left: 4px solid var(--primary-blue);
 }
 
 .timeline-item {
@@ -105,7 +105,7 @@
 
 .timeline-year {
     font-weight: bold;
-    color: #003366;
+    color: var(--primary-blue);
     background-color: #e6eef7;
     padding: 8px 14px;
     border-radius: 20px;
@@ -124,8 +124,36 @@
 
 .timeline-content h3 {
     margin-top: 0;
-    color: #003366;
+    color: var(--primary-blue);
 }
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-content {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .about-hero {
+        padding: 60px 20px;
+        height: auto;
+    }
+    
+    .about-text {
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        min-width: 300px;
+    }
+    .timeline-section {
+        padding: 60px 20px;
+    }
+
+}
+
 
 @media (max-width: 768px) {
     .timeline {

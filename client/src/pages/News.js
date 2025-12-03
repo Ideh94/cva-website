@@ -33,7 +33,8 @@ function News() {
               <p>{item.text}</p>
 
               <a className="read-more" href={item.link}>
-                Read more →
+                Read more
+                <span className="arrow-icon">&#8594;</span>
               </a>
             </div>
           </article>

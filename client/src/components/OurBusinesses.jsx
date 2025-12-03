@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import FishFarming from "../assets/images/ourbusinesses-1.png";
-import RiceFarming from "../assets/images/ourbusinesses-2.png";
-import FoodProcessing from "../assets/images/ourbusinesses-3.png";
-import Construction from "../assets/images/ourbusinesses-4.png";
+import FishFarming from "../assets/images/ourbusinesses-1.webp";
+import RiceFarming from "../assets/images/ourbusinesses-2.webp";
+import FoodProcessing from "../assets/images/ourbusinesses-3.webp";
+import Construction from "../assets/images/ourbusinesses-4.webp";
 import "./OurBusinesses.css";
 
 const Business = () => {
@@ -17,9 +17,10 @@ const Business = () => {
                         <img
                             src={FishFarming}
                             alt="Fish Farming"
+                            loading="lazy"
                         />
                         <div className="business-card-content">
-                            <h3>Fish Farming</h3>
+                            <h4>Fish Farming</h4>
                             <p>
                                 Supplying fresh, healthy fish through modern aquaculture.
                             </p>
@@ -29,9 +30,10 @@ const Business = () => {
                         <img
                             src={RiceFarming}
                             alt="Rice Farming"
+                            loading="lazy"
                         />
                         <div className="business-card-content">
-                            <h3>Rice Farming</h3>
+                            <h4>Rice Farming</h4>
                             <p>
                                 Reducing import dependence with locally grown, high-quality rice.
                             </p>
@@ -41,9 +43,10 @@ const Business = () => {
                         <img
                             src={FoodProcessing}
                             alt="Food Processing"
+                            loading="lazy"
                         />
                         <div className="business-card-content">
-                            <h3>Food Processing & Packaging</h3>
+                            <h4>Food Processing & Packaging</h4>
                             <p>
                                 Transforming raw produce into consumer-ready food products.
                             </p>
@@ -53,9 +56,10 @@ const Business = () => {
                         <img
                             src={Construction}
                             alt="Construction"
+                            loading="lazy"
                         />
                         <div className="business-card-content">
-                            <h3>Construction</h3>
+                            <h4>Construction</h4>
                             <p>
                                 Building infrastructure that supports growth and development.
                             </p>

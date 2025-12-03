@@ -16,7 +16,7 @@ const Hero = () => {
           capacity development.
         </p>
 
-        <div className="buttons">
+        <div className="call-to-action">
           <Link to="/contact">
             <button className="contact">Contact Us</button>
           </Link>

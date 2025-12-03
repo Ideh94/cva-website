@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Products.css";
-import Product1 from "../assets/images/products-1.png";
-import Product2 from "../assets/images/products-2.png";
-import Product3 from "../assets/images/products-3.png";
-import Product4 from "../assets/images/products-4.png";
+import Product1 from "../assets/images/products-1.webp";
+import Product2 from "../assets/images/products-2.webp";
+import Product3 from "../assets/images/products-3.webp";
+import Product4 from "../assets/images/products-4.webp";
 
 const Products = () => {
   return (
@@ -15,7 +15,7 @@ const Products = () => {
       </div>
       <div className="products-cards-container">
         <div className="product-card">
-          <img src={Product1} alt="Fresh Poundo" />
+          <img src={Product1} alt="Fresh Poundo" loading="lazy" />
           <div className="product-card-content">
             <h4>Fresh Poundo</h4>
             <p>Traditional Nigerian staple made from premium yam flour, perfect for making authentic pounded yam.</p>
@@ -23,7 +23,7 @@ const Products = () => {
         </div>
 
         <div className="product-card">
-          <img src={Product2} alt="Organic Rice" />
+          <img src={Product2} alt="Organic Rice" loading="lazy" />
           <div className="product-card-content">
             <h4>Organic Rice</h4>
             <p>Locally grown, high-quality rice cultivated using sustainable farming practices for superior taste.</p>
@@ -31,7 +31,7 @@ const Products = () => {
         </div>
 
         <div className="product-card">
-          <img src={Product3} alt="Organic Sugar" />
+          <img src={Product3} alt="Organic Sugar" loading="lazy" />
           <div className="product-card-content">
             <h4>Organic Sugar</h4>
             <p>Natural sweetener derived from organic sugarcane, perfect for cooking and baking.</p>
@@ -39,7 +39,7 @@ const Products = () => {
         </div>
 
         <div className="product-card">
-          <img src={Product4} alt="Organic Flour" />
+          <img src={Product4} alt="Organic Flour" loading="lazy" />
           <div className="product-card-content">
             <h4>Organic Flour</h4>
             <p>Premium wheat flour milled from organically grown grains, ideal for all your baking needs.</p>

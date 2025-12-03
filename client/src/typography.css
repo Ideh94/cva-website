@@ -3,6 +3,7 @@
   /* Font Families */
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-secondary: 'Lato', sans-serif;
+  --font-serif: 'Merriweather', serif;
   --font-accent: 'Poppins', sans-serif;
   
   /* Base Font Size - 16px default */

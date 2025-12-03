@@ -21,8 +21,7 @@ const Home = () => {
             <p>
               CVA Group is a dynamic Nigerian enterprise dedicated to meeting the
               essential needs of individuals, families, and businesses. We operate
-              across multiple sectors — from fish production and rice farming to
-              construction, logistics, and training — all with one purpose: to
+              across multiple sectors all with one purpose: to
               strengthen local value chains, create jobs, and foster community
               development.
             </p>

@@ -1,6 +1,6 @@
 /* Our Businesses Section */
 .our-businesses-section {
-  background: linear-gradient(135deg, rgba(255, 247, 214, 0.05) 0%, rgba(228, 225, 215, 0.05) 100%);
+  background: #fff7d6;
 }
 
 .our-businesses-overlay {
@@ -15,9 +15,9 @@
 }
 
 .our-businesses-overlay h2 {
-  font-size: var(--font-size-xl);
-  margin-bottom: var(--spacing-lg);
-  color: #083052;
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-sm);
+  color: var(--primary-blue);
   font-weight: 700;
   line-height: 1.2;
 }
@@ -25,8 +25,8 @@
 .underline {
   width: 80px;
   height: 4px;
-  background-color: var(--accent-brown);
-  margin-bottom: var(--spacing-xl);
+  background-color: var(--accent-orange);
+  margin-bottom: var(--spacing-md);
   border-radius: 2px;
 }
 
@@ -47,7 +47,9 @@
   border-radius: 12px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
-  background: #fff; 
+  cursor: pointer; 
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .business-card::before {
@@ -57,9 +59,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary-blue), var(--accent-orange));
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
+  background: var(--primary-green);
   z-index: 10;
 }
 
@@ -71,40 +71,48 @@
   transform: translateY(-8px);
  
 }
+  
+  @media (max-width: 768px) {
+    .business-card:hover {
+      transform: none;
+    }
+    .business-card {
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+  }
 
 .business-card img {
-  width: 100%; /* Full width */
-  height: 200px; /* Fixed height for consistency */
-  object-fit: cover; /* Cover the area */
-  filter: grayscale(0%); /* Remove grayscale by default for better visuals */
+  width: 100%; 
+  height: 200px; 
+  object-fit: cover; 
+  filter: grayscale(0%); 
   transition: transform 0.5s ease;
-  margin-bottom: 0; /* Remove margin */
+  margin-bottom: 0; 
 }
 
 .business-card:hover img {
-  transform: scale(1.05); /* Zoom effect on hover */
+  transform: scale(1.05);  
 }
 
 .business-card-content {
-  padding: 1.5rem; /* Add padding to content */
-  text-align: left; /* Align text left */
+  padding: 1.5rem; 
   width: 100%;
 }
 
-.business-card h3 {
+.business-card h4 {
   font-size: var(--font-size-lg);
-  font-weight: 700;
-  color: #083052;
-  text-align: left;
-  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--primary-blue-dark);
+  margin: 0 0 0.5rem 0;
+  font-family: var(--font-family);
 }
 
 .business-card p {
-  font-size: var(--font-size-sm);
-  color: var(--dark-gray);
-  line-height: 1.6;
-  text-align: left;
+ font-size: var(--font-size-sm);
+  line-height: 1.5;
+  color: var(--primary-blue-dark);
   margin: 0;
+  font-family: var(--font-family);
 }
 
 .businesses-cta {
@@ -115,25 +123,26 @@
   padding: var(--spacing-xl) 0;
 }
 
-.businesses-cta .learn-more-button {
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
-  color: var(--white);
-  padding: var(--spacing-md) var(--spacing-lg);
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: var(--font-size-sm);
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-  display: flex;
+.businesses-cta .cta-button {
+  background: var(--accent-orange);
+  color: var(--text-dark);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: 50px;
   align-items: center;
   gap: var(--spacing-sm);
-  box-shadow: 0 4px 16px rgba(0, 85, 153, 0.2);
 }
 
-.businesses-cta .learn-more-button:hover {
+.businesses-cta .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 85, 153, 0.3);
+}
+
+@media (max-width: 640px) {
+  .businesses-cta .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .businesses-cta .arrow-icon {
@@ -141,7 +150,7 @@
   transition: transform 0.3s ease;
 }
 
-.businesses-cta .learn-more-button:hover .arrow-icon {
+.businesses-cta .cta-button:hover .arrow-icon {
   transform: translateX(4px);
 }
 /* Responsive Grid Layout */
