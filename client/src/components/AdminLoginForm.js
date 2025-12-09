@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import API_BASE_URL from '../api/config';
 
 const AdminLoginForm = () => {
     const [email, setEmail] = useState('');
@@ -11,7 +12,7 @@ const AdminLoginForm = () => {
         e.preventDefault();
 
         try {
-            const res = await axios.post('http://localhost:5000/api/admin/login', { email, password });
+            const res = await axios.post(`${API_BASE_URL}/api/admin/login`, { email, password });
 
             if (res.data.token) {
                 // ✅ Save token to localStorage
