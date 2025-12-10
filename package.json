@@ -7,10 +7,6 @@
     "build": "cd client && npm install && npm run build",
     "dev:server": "cd server && npm run start"
   },
-  "dependencies": {
-    "mongoose": "^8.16.3",
-    "bcryptjs": "^3.0.2",
-    "jsonwebtoken": "^9.0.2"
-  },
+  "dependencies": {},
   "devDependencies": {}
 }
