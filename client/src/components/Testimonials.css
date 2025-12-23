@@ -1,10 +1,9 @@
 /* Testimonials Section - Stylish Carousel */
 .testimonials-section {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-  padding: 6rem 0;
+  padding: 8rem 2rem;
   position: relative;
   overflow: hidden;
-  margin-top: var(--spacing-lg);
 }
 
 /* Animated background effects */
@@ -51,12 +50,11 @@
 
 
 .testimonials-header .underline {
-  width: 5rem;
-  height: 0.3rem;
-  background: linear-gradient(90deg, var(--accent-orange), #fbbf24);
+  width: 60px;
+  height: 4px;
+  background: var(--accent-orange);
   margin: 0 auto;
-  border-radius: 2rem;
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+  border-radius: 2px;
 }
 
 /* Carousel Container */
