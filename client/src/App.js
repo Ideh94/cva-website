@@ -26,6 +26,7 @@ const FoodProcessing = lazy(() => import('./pages/FoodProcessing'));
 const Construction = lazy(() => import('./pages/Construction'));
 const Logistics = lazy(() => import('./pages/Logistics'));
 const CapacityDevelopment = lazy(() => import('./pages/CapacityDevelopment'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 Object.entries(theme.colors).forEach(([key, value]) => {
   if (typeof value === "string") {
@@ -55,6 +56,8 @@ function App() {
           <Route path="/construction" element={<Construction />} />
           <Route path="/logistics" element={<Logistics />} />
           <Route path="/capacitydevelopment" element={<CapacityDevelopment />} />
+          {/* Catch-all 404 route */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
       <Footer />

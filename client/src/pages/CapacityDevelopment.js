@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGraduationCap, FaCheckCircle, FaChalkboardTeacher, FaHandsHelping, FaLightbulb, FaCertificate, FaUsers, FaChartLine } from 'react-icons/fa';
-import TrainingAcademy from "../assets/images/training-academy.jpg";
+import TrainingAcademy from "../assets/images/training-academy.jpg"; // Small enough as is
 import './BusinessDetail.css';
 
 const CapacityDevelopment = () => {

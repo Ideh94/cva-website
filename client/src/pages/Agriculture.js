@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaLeaf, FaCheckCircle, FaSeedling, FaFish, FaTractor, FaWater, FaUsers, FaChartLine } from 'react-icons/fa';
-import FishFarming from "../assets/images/ourbusinesses-1.png";
-import RiceFarming from "../assets/images/ourbusinesses-2.png";
+import FishFarming from "../assets/images/ourbusinesses-1.webp";
+import RiceFarming from "../assets/images/ourbusinesses-2.webp";
 import './BusinessDetail.css';
 
 const Agriculture = () => {

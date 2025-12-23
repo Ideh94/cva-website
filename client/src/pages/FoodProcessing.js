@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaIndustry, FaCheckCircle, FaBox, FaCogs, FaThermometerHalf, FaShieldAlt, FaUsers, FaChartLine } from 'react-icons/fa';
-import FoodProcessingImg from "../assets/images/ourbusinesses-3.png";
+import FoodProcessingImg from "../assets/images/ourbusinesses-3.webp";
 import './BusinessDetail.css';
 
 const FoodProcessing = () => {

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaHardHat, FaCheckCircle, FaBuilding, FaRoad, FaHome, FaTools, FaUsers, FaChartLine } from 'react-icons/fa';
-import ConstructionImg from "../assets/images/ourbusinesses-4.png";
+import ConstructionImg from "../assets/images/ourbusinesses-4.webp";
 import './BusinessDetail.css';
 
 const Construction = () => {
