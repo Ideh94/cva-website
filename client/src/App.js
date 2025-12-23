@@ -20,6 +20,13 @@ const OurBusinesses = lazy(() => import('./pages/OurBusinesses'));
 const Blog = lazy(() => import('./pages/NewsPage'));
 const Contact = lazy(() => import('./pages/Contact'));
 
+// Business detail pages
+const Agriculture = lazy(() => import('./pages/Agriculture'));
+const FoodProcessing = lazy(() => import('./pages/FoodProcessing'));
+const Construction = lazy(() => import('./pages/Construction'));
+const Logistics = lazy(() => import('./pages/Logistics'));
+const CapacityDevelopment = lazy(() => import('./pages/CapacityDevelopment'));
+
 Object.entries(theme.colors).forEach(([key, value]) => {
   if (typeof value === "string") {
     document.documentElement.style.setProperty(`--color-${key}`, value);
@@ -42,6 +49,12 @@ function App() {
           <Route path="/ourbusinesses" element={<OurBusinesses />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+          {/* Business detail pages */}
+          <Route path="/agriculture" element={<Agriculture />} />
+          <Route path="/foodprocessing" element={<FoodProcessing />} />
+          <Route path="/construction" element={<Construction />} />
+          <Route path="/logistics" element={<Logistics />} />
+          <Route path="/capacitydevelopment" element={<CapacityDevelopment />} />
         </Routes>
       </Suspense>
       <Footer />
