@@ -1,6 +1,7 @@
 /* Our Businesses Section */
 .our-businesses-section {
-  background: #fff7d6;
+  background: var(--white);
+  padding: 8rem 2rem;
 }
 
 .our-businesses-overlay {
@@ -44,12 +45,14 @@
   align-items: flex-start; 
   gap: 0; 
   padding: 0; 
-  border-radius: 12px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 24px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
   cursor: pointer; 
   background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  position: relative;
 }
 
 .business-card::before {
@@ -58,59 +61,52 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 5px;
   background: var(--primary-green);
   z-index: 10;
+  transform: scaleX(0.8);
+  transition: transform 0.4s ease;
+  border-radius: 0 0 5px 5px;
+}
+
+.business-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 50px rgba(0, 85, 153, 0.1);
 }
 
 .business-card:hover::before {
   transform: scaleX(1);
 }
 
-.business-card:hover {
-  transform: translateY(-8px);
- 
-}
-  
-  @media (max-width: 768px) {
-    .business-card:hover {
-      transform: none;
-    }
-    .business-card {
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-  }
-
 .business-card img {
   width: 100%; 
-  height: 200px; 
+  height: 220px; 
   object-fit: cover; 
-  filter: grayscale(0%); 
-  transition: transform 0.5s ease;
-  margin-bottom: 0; 
+  transition: transform 0.6s ease;
 }
 
 .business-card:hover img {
-  transform: scale(1.05);  
+  transform: scale(1.08);  
 }
 
 .business-card-content {
-  padding: 1.5rem; 
+  padding: 2rem; 
   width: 100%;
 }
 
 .business-card h4 {
-  font-size: var(--font-size-lg);
-  font-weight: 500;
-  color: var(--primary-blue-dark);
-  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin: 0 0 0.75rem 0;
   font-family: var(--font-family);
 }
 
 .business-card p {
- font-size: var(--font-size-sm);
-  line-height: 1.5;
-  color: var(--primary-blue-dark);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+  opacity: 0.8;
   margin: 0;
   font-family: var(--font-family);
 }
