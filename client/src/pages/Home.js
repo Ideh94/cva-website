@@ -6,18 +6,18 @@ import News from "./News";
 import Products from "../components/Products";
 import Business from "../components/OurBusinesses.jsx"
 import { Link } from "react-router-dom";
-import AboutImg from "../assets/images/rice-farming.jpg";
 const Home = () => {
 
   return (
     <div className="home-page">
       <Hero />
       <section className="about-section">
-        <div className="about-container">
-          <div className="about-content">
-            <span className="eyebrow">DEDICATED TO EXCELLENCE</span>
-            <h2>Who we are</h2>
-            <div className="underline"></div>
+        <div className="about-overlay">
+          <span className="eyebrow">DEDICATED TO EXCELLENCE</span>
+          <h2>Who we are</h2>
+          <div className="underline"></div>
+          
+          <div className="about-card">
             <p>
               CVA Group is a dynamic Nigerian enterprise dedicated to meeting the
               essential needs of individuals, families, and businesses.
@@ -40,16 +40,6 @@ const Home = () => {
             <Link to="/about" className="learn-more-btn">
               Explore Our Story <span className="arrow">→</span>
             </Link>
-          </div>
-          <div className="about-image-container">
-            <div className="about-image-wrapper">
-              <img src={AboutImg} alt="CVA Rice Farming" className="about-main-image" />
-              <div className="image-experience-badge">
-                <span className="badge-number">CVA</span>
-                <span className="badge-text">Group</span>
-              </div>
-            </div>
-            <div className="image-decoration"></div>
           </div>
         </div>
       </section>

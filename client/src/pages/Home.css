@@ -12,26 +12,22 @@ body {
 }
 
 /* About Section */
-/* About Section Redesign */
+/* About Section - Refined Centered Layout */
 .about-section {
   padding: 8rem 2rem;
   background-color: var(--light-gray);
-  overflow: hidden;
-}
-
-.about-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
-.about-content {
+.about-overlay {
+  max-width: 900px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  text-align: left;
+  align-items: center;
 }
 
 .eyebrow {
@@ -40,23 +36,34 @@ body {
   font-size: 0.875rem;
   letter-spacing: 2px;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
-.about-content h2 {
+.about-overlay h2 {
   font-size: 3rem;
   color: var(--primary-blue);
   margin-bottom: 0.5rem;
+  font-weight: 800;
 }
 
 .underline {
   width: 60px;
   height: 4px;
   background-color: var(--accent-orange);
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   border-radius: 2px;
 }
 
-.about-content p {
+.about-card {
+  background-color: var(--white);
+  padding: 4rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  border-top: 6px solid var(--primary-blue);
+  width: 100%;
+}
+
+.about-card p {
   font-size: 1.125rem;
   line-height: 1.8;
   color: var(--text-dark);
@@ -67,8 +74,10 @@ body {
 .about-stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin: 2rem 0;
+  gap: 3rem;
+  margin: 3rem 0;
+  border-top: 1px solid var(--medium-gray);
+  padding-top: 2rem;
 }
 
 .stat-item {
@@ -98,80 +107,18 @@ body {
   gap: 0.75rem;
   background-color: var(--primary-blue);
   color: var(--white);
-  padding: 1rem 2rem;
+  padding: 1.1rem 2.5rem;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  width: fit-content;
   transition: all 0.3s ease;
   margin-top: 1rem;
 }
 
 .learn-more-btn:hover {
   background-color: #00447a;
-  transform: translateX(5px);
-}
-
-.about-image-container {
-  position: relative;
-}
-
-.about-image-wrapper {
-  position: relative;
-  z-index: 2;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-}
-
-.about-main-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.5s ease;
-}
-
-.about-image-wrapper:hover .about-main-image {
-  transform: scale(1.05);
-}
-
-.image-experience-badge {
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-  background-color: var(--accent-orange);
-  padding: 1.5rem;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  z-index: 3;
-}
-
-.badge-number {
-  font-size: 1.5rem;
-  font-weight: 900;
-  line-height: 1;
-}
-
-.badge-text {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.image-decoration {
-  position: absolute;
-  top: -2rem;
-  right: -2rem;
-  width: 100%;
-  height: 100%;
-  border: 4px solid var(--accent-orange);
-  border-radius: 20px;
-  z-index: 1;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,68,122,0.2);
 }
 
 
@@ -228,40 +175,13 @@ body {
 
 /* 📱 Responsive */
 
-/* Medium screens (tablets and small desktops) */
-@media (max-width: 1199px) {
-  .about-container {
-    gap: 3rem;
+@media (max-width: 1024px) {
+  .about-overlay {
+    max-width: 95%;
   }
-  
-  .about-content h2 {
+
+  .about-overlay h2 {
     font-size: 2.5rem;
-  }
-
-  .products-cards-container {
-    max-width: 1000px;
-  }
-}
-
-/* Small screens (tablets) */
-@media (max-width: 992px) {
-  .about-container {
-    grid-template-columns: 1fr;
-    gap: 4rem;
-    text-align: center;
-  }
-
-  .about-content {
-    align-items: center;
-    text-align: center;
-  }
-
-  .about-stats {
-    justify-content: center;
-  }
-
-  .image-decoration {
-    display: none;
   }
 }
 
@@ -270,7 +190,11 @@ body {
     padding: 5rem 1.5rem;
   }
 
-  .about-content h2 {
+  .about-card {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .about-overlay h2 {
     font-size: 2rem;
   }
 
@@ -278,10 +202,8 @@ body {
     font-size: 2rem;
   }
 
-  .image-experience-badge {
-    padding: 1rem;
-    bottom: 1rem;
-    right: 1rem;
+  .about-stats {
+    gap: 1.5rem;
   }
   
   .learn-more-btn {
@@ -292,8 +214,8 @@ body {
   .products-cards-container {
     flex-direction: column;
     height: auto;
-    padding: 20px;
-    gap: 20px;
+    padding: 1rem;
+    gap: 1.5rem;
   }
 
   .product-card {
@@ -302,34 +224,36 @@ body {
 
   .contact-overlay p {
     width: 100%;
-    padding: 0 20px;
+    padding: 0 1rem;
   }
 
   .contact-button {
     width: 100%;
     max-width: 300px;
-    padding: 0.8rem 1.5rem;
   }
 }
 
-/* Extra small screens (large phones) */
 @media (max-width: 480px) {
   .about-section {
     padding: 4rem 1rem;
   }
 
-  .about-content h2 {
+  .about-overlay h2 {
     font-size: 1.75rem;
   }
 
   .stat-number {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
   }
 
   .about-stats {
     gap: 1rem;
   }
-  
+
   .Products-section {
     padding: 1rem;
   }
