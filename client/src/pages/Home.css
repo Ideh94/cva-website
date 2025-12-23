@@ -18,8 +18,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--white);
-  padding: var(--spacing-xl) var(--spacing-lg);
+  background: var(--light-gray);
+  padding: var(--spacing-2xl) var(--spacing-lg);
 }
 
 .about-overlay {
@@ -33,11 +33,9 @@ body {
   width: 100%;
 }
 
-
-
 .about-overlay h2 {
   position: relative;
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-3xl);
   margin-bottom: var(--spacing-sm);
   font-weight: 700;
   z-index: 10;
@@ -57,15 +55,17 @@ body {
 .about-card {
   position: relative;
   z-index: 10;
-  background-color: #00c9c8;
-  max-width: 90rem;
-  padding: var(--spacing-md);
+  background-color: var(--white);
+  max-width: 800px;
+  padding: var(--spacing-xl);
   margin: 0 auto;
   color: var(--text-dark);
   border-radius: 12px;
-  line-height: 1.6;
+  line-height: 1.8;
   font-size: var(--font-size-md);
   text-align: center;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  border-top: 5px solid var(--primary-blue);
 }
 .about-card p{
   font-size: var(--font-size-md);
