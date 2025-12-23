@@ -88,8 +88,9 @@ h6 { font-size: var(--font-size-lg); }
 
 p {
   margin-bottom: var(--spacing-sm);
-  font-size: var(--font-size-base);
-  line-height: 1.7;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  opacity: 0.9;
 }
 
 button, .button {
