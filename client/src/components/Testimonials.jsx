@@ -8,8 +8,6 @@ import customer2 from "../assets/images/testimonial-2.webp";
 import customer3 from "../assets/images/testimonial-3.webp";
 
 export default function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -43,95 +41,47 @@ export default function Testimonials() {
     },
   ];
 
-  const nextTestimonial = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const prevTestimonial = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToSlide = (index) => {
-    setCurrentIndex(index);
-  };
-
-  const currentTestimonial = testimonials[currentIndex];
-
   return (
     <section className="testimonials-section">
       <div className="testimonials-container">
-        <div className="testimonials-header">
+        <div className="testimonials-header" data-aos="fade-up">
           <h2>What Our Customers Say</h2>
           <div className="underline"></div>
         </div>
 
-        <div className="testimonial-carousel">
-          <button 
-            className="carousel-button prev" 
-            onClick={prevTestimonial}
-            aria-label="Previous testimonial"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-
-          <div className="testimonial-card-large" key={currentIndex}>
-            <div className="quote-decoration">
-              <div className="quote-mark-large">"</div>
-              <div className="quote-accent"></div>
-            </div>
-
-            <div className="testimonial-content">
-              <p className="testimonial-text-large">{currentTestimonial.text}</p>
+        <div className="testimonials-grid">
+          {testimonials.map((testimonial, index) => (
+            <div 
+              className="testimonial-card" 
+              key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
+              <div className="testimonial-quote-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.017 21L14.017 18C14.017 15.2386 16.2556 13 19.017 13H21V21H14.017ZM3.01703 21L3.01703 18C3.01703 15.2386 5.2556 13 8.01703 13H10V21H3.01703ZM19.017 11C15.151 11 12.017 14.134 12.017 18V21C12.017 22.1046 12.9124 23 14.017 23H21C22.1046 23 23 22.1046 23 21V13C23 11.8954 22.1046 11 21 11H19.017ZM8.01703 11C4.15103 11 1.01703 14.134 1.01703 18V21C1.01703 22.1046 1.91243 23 3.01703 23H10C11.1046 23 12 22.1046 12 21V13C12 11.8954 11.1046 11 10 11H8.01703Z" fill="currentColor" fillOpacity="0.1"/>
+                </svg>
+              </div>
               
-              <div className="testimonial-author-large">
-                <div className="author-image-wrapper">
-                  <img 
-                    src={currentTestimonial.img} 
-                    alt={currentTestimonial.name} 
-                    className="author-image-large" 
-                    loading="lazy" 
-                  />
-                  <div className="image-border"></div>
-                </div>
-                <div className="author-details">
-                  <h4 className="author-name-large">{currentTestimonial.name}</h4>
-                  <p className="author-role-large">{currentTestimonial.role}</p>
-                  <p className="author-company-large">{currentTestimonial.company}</p>
+              <div className="testimonial-content">
+                <p className="testimonial-text">{testimonial.text}</p>
+                
+                <div className="testimonial-author">
+                  <div className="author-image-wrapper">
+                    <img 
+                      src={testimonial.img} 
+                      alt={testimonial.name} 
+                      className="author-image" 
+                      loading="lazy" 
+                    />
+                  </div>
+                  <div className="author-details">
+                    <h4 className="author-name">{testimonial.name}</h4>
+                    <p className="author-role">{testimonial.role} at {testimonial.company}</p>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <div className="card-decoration">
-              <div className="decoration-circle"></div>
-              <div className="decoration-dot"></div>
-            </div>
-          </div>
-
-          <button 
-            className="carousel-button next" 
-            onClick={nextTestimonial}
-            aria-label="Next testimonial"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
-
-        <div className="carousel-dots">
-          {testimonials.map((_, index) => (
-            <button
-              key={index}
-              className={`dot ${index === currentIndex ? 'active' : ''}`}
-              onClick={() => goToSlide(index)}
-              aria-label={`Go to testimonial ${index + 1}`}
-            />
           ))}
         </div>
       </div>
