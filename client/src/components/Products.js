@@ -23,7 +23,7 @@ const Products = () => {
         </div>
 
         <div className="product-card">
-          <img src={Product2} alt="Organic Rice" loading="lazy" />
+          <img src={Product2} alt="Parboiled Rice" loading="lazy" />
           <div className="product-card-content">
             <h4> Parboiled Rice</h4>
             <p>Locally grown, high-quality rice cultivated using sustainable farming practices for superior taste.</p>
