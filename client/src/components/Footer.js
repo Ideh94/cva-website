@@ -30,8 +30,8 @@ function Footer() {
           <ul>
             <li><Link to="/agriculture">Agriculture & Farming</Link></li>
             <li><Link to="/foodprocessing">Food Processing</Link></li>
-            <li><Link to="/construction">Construction</Link></li>
-            <li><Link to="/logistics">Logistics & Distribution</Link></li>
+            <li><Link to="/construction">Logistics & Distribution</Link></li>
+            <li><Link to="/logistics">Construction</Link></li>
             <li><Link to="/capacitydevelopment">Capacity Development</Link></li>
           </ul>
         </div>

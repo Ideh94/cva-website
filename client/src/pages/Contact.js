@@ -69,7 +69,7 @@ const Contact = () => {
               <FaPhoneAlt />
             </div>
             <div className="contact-details">
-              <h3>Call Us</h3>
+              <h3>Callw</h3>
               <p><a href="tel:+2347038100100">+234 703 810 0100</a></p>
               <p><a href="tel:+2347033754215">+234 703 375 4215</a></p>
             </div>
@@ -80,9 +80,9 @@ const Contact = () => {
               <FaEnvelope />
             </div>
             <div className="contact-details">
-              <h3>Email Us</h3>
-              <p><a href="mailto:info@cva.com.ng">info@cva.com.ng</a></p>
-              <p><a href="mailto:support@cva.com.ng">support@cva.com.ng</a></p>
+              <h3>Email</h3>
+              <p><a href="mailto:info@cva.com.ng">info@cvagroup.com.ng</a></p>
+              
             </div>
           </div>
         </div>
