@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import API_BASE_URL from '../api/config';
 import { FaCalendarAlt, FaUser } from 'react-icons/fa';
 import './NewsPage.css';
 
@@ -48,7 +49,7 @@ const NewsPage = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/news/blog');
+        const response = await axios.get(`${API_BASE_URL}/api/news/blog`);
         if (response.data && response.data.articles) {
           const apiNews = response.data.articles.map((article, index) => ({
             id: index + 4, // Start IDs after hardcoded ones

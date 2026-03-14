@@ -3,6 +3,7 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaCheckCircle } from 'react-ico
 import './Contact.css';
 
 import axios from 'axios';
+import API_BASE_URL from '../api/config';
 
 const Contact = () => {
   useEffect(() => {
@@ -31,7 +32,7 @@ const Contact = () => {
     setError('');
     
     try {
-      await axios.post('http://localhost:5000/api/contact', formData);
+      await axios.post(`${API_BASE_URL}/api/contact`, formData);
       setSubmitted(true);
       setFormData({ name: '', email: '', subject: '', message: '' });
       setTimeout(() => setSubmitted(false), 5000);
