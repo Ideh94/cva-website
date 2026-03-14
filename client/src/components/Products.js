@@ -18,7 +18,7 @@ const Products = () => {
           <img src={Product1} alt="Fresh Poundo" loading="lazy" />
           <div className="product-card-content">
             <h4>Poundo Yam Flour</h4>
-            <p>Traditional Nigerian staple made from premium yam flour, perfect for making authentic pounded yam.</p>
+            <p>Traditional Nigerian staple made from premium yam flour, perfect for making pounded yam.</p>
           </div>
         </div>
 
