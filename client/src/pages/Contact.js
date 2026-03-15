@@ -70,7 +70,7 @@ const Contact = () => {
               <FaPhoneAlt />
             </div>
             <div className="contact-details">
-              <h3>Callw</h3>
+              <h3>Call</h3>
               <p><a href="tel:+2347038100100">+234 703 810 0100</a></p>
               <p><a href="tel:+2347033754215">+234 703 375 4215</a></p>
             </div>
