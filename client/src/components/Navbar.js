@@ -47,10 +47,10 @@ function Navbar() {
         <span className='navbar-links-container'>
           <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
             <li><Link to="/" className={location.pathname === '/' ? 'active' : ''} onClick={() => setIsOpen(false)}>Home</Link></li>
-            <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''} onClick={() => setIsOpen(false)}>About Us</Link></li>
+            <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''} onClick={() => setIsOpen(false)}>About</Link></li>
             <li><Link to="/ourbusinesses" className={location.pathname === '/ourbusinesses' ? 'active' : ''} onClick={() => setIsOpen(false)}>Our Businesses</Link></li>
             <li><Link to="/blog" className={location.pathname === '/blog' ? 'active' : ''} onClick={() => setIsOpen(false)}>News</Link></li>
-            <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''} onClick={() => setIsOpen(false)}>Contact</Link></li>
+            <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''} onClick={() => setIsOpen(false)}>Contact Us</Link></li>
           </ul>
         </span>
       </div>
