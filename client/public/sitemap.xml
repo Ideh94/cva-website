@@ -2,38 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://cvamultiservices.com/</loc>
-    <lastmod>2023-12-23</lastmod>
+    <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://cvamultiservices.com/agriculture</loc>
-    <lastmod>2023-12-23</lastmod>
+    <loc>https://cvamultiservices.com/about</loc>
+    <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cvamultiservices.com/food-processing</loc>
-    <lastmod>2023-12-23</lastmod>
+    <loc>https://cvamultiservices.com/ourbusinesses</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cvamultiservices.com/blog</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cvamultiservices.com/agriculture</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cvamultiservices.com/foodprocessing</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cvamultiservices.com/construction</loc>
+    <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cvamultiservices.com/logistics</loc>
-    <lastmod>2023-12-23</lastmod>
+    <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cvamultiservices.com/capacity-development</loc>
-    <lastmod>2023-12-23</lastmod>
+    <loc>https://cvamultiservices.com/capacitydevelopment</loc>
+    <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cvamultiservices.com/contact</loc>
-    <lastmod>2023-12-23</lastmod>
+    <lastmod>2025-12-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 </urlset>
+

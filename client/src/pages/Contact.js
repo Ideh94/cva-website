@@ -82,8 +82,8 @@ const Contact = () => {
             </div>
             <div className="contact-details">
               <h3>Email Us</h3>
-              <p><a href="mailto:info@cva.com.ng">info@cva.com.ng</a></p>
-              <p><a href="mailto:support@cva.com.ng">support@cva.com.ng</a></p>
+              <p><a href="mailto:info@cva.com.ng">info@cvagroup.com.ng</a></p>
+              <p><a href="mailto:support@cva.com.ng">support@cvagroup.com.ng</a></p>
             </div>
           </div>
         </div>
@@ -134,15 +134,21 @@ const Contact = () => {
 
             <div className="form-group">
               <label htmlFor="subject">Subject</label>
-              <input
-                type="text"
+              <select
                 id="subject"
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                placeholder="How can we help you?"
                 required
-              />
+              >
+                <option value="" disabled>Select a subject</option>
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Project Proposal">Project Proposal</option>
+                <option value="Technical Support">Technical Support</option>
+                <option value="Partnership">Partnership</option>
+                <option value="Careers">Careers</option>
+                <option value="Other">Other</option>
+              </select>
             </div>
 
             <div className="form-group">
