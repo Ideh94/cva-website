@@ -14,7 +14,7 @@ body {
 /* About Section */
 /* About Section - Refined Centered Layout */
 .about-section {
-  padding: 8rem 2rem;
+  padding: 5rem 2rem;
   background-color: var(--light-gray);
   display: flex;
   justify-content: center;
@@ -131,7 +131,7 @@ body {
 
 /*Contact section*/
 .contact-section {
-  padding: 8rem 2rem;
+  padding: 5rem 2rem;
   background-color: var(--white);
   text-align: center;
 }
@@ -202,7 +202,7 @@ body {
 
 @media (max-width: 768px) {
   .about-section {
-    padding: 5rem 1.5rem;
+    padding: 3.5rem 1.5rem;
   }
 
   .about-card {
@@ -250,7 +250,7 @@ body {
 
 @media (max-width: 480px) {
   .about-section {
-    padding: 4rem 1rem;
+    padding: 2.5rem 1rem;
   }
 
   .about-overlay h2 {
@@ -269,8 +269,8 @@ body {
     gap: 1rem;
   }
 
-  .Products-section {
-    padding: 1rem;
+  .contact-section {
+    padding: 2.5rem 1rem;
   }
 
   .contact-overlay h2 {

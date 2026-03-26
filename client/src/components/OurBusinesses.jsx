@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import FishFarming from "../assets/images/ourbusinesses-1.webp";
 import RiceFarming from "../assets/images/ourbusinesses-2.webp";
 import FoodProcessing from "../assets/images/ourbusinesses-3.webp";
@@ -7,13 +9,22 @@ import Construction from "../assets/images/ourbusinesses-4.webp";
 import "./OurBusinesses.css";
 
 const Business = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: "ease-in-out",
+            delay: 100,
+        });
+    }, []);
+
     return (
         <section className="our-businesses-section">
-            <div className="our-businesses-overlay">
+            <div className="our-businesses-overlay" data-aos="fade-up">
                 <h2>Our Businesses</h2>
                 <div className="underline"></div>
                 <div className="business-cards-container">
-                    <div className="business-card">
+                    <div className="business-card" data-aos="fade-up" data-aos-delay="100">
                         <img
                             src={FishFarming}
                             alt="Fish Farming"
@@ -26,7 +37,7 @@ const Business = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="business-card">
+                    <div className="business-card" data-aos="fade-up" data-aos-delay="200">
                         <img
                             src={RiceFarming}
                             alt="Rice Farming"
@@ -39,7 +50,7 @@ const Business = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="business-card">
+                    <div className="business-card" data-aos="fade-up" data-aos-delay="300">
                         <img
                             src={FoodProcessing}
                             alt="Food Processing"
@@ -52,7 +63,7 @@ const Business = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="business-card">
+                    <div className="business-card" data-aos="fade-up" data-aos-delay="400">
                         <img
                             src={Construction}
                             alt="Construction"
