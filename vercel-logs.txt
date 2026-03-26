@@ -1,0 +1,73 @@
+Vercel CLI 50.1.0
+Retrieving project…
+Deploying ideh94s-projects/cva-website
+Uploading [--------------------] (0.0B/3.4MB)
+Uploading [=====---------------] (883.0KB/3.4MB)
+Uploading [==========----------] (1.7MB/3.4MB)
+Uploading [===============-----] (2.5MB/3.4MB)
+Uploading [====================] (3.4MB/3.4MB)
+Inspect: https://vercel.com/ideh94s-projects/cva-website/BjNG8xjQGuWYZrGxXfQEXNF15QT6 [8s]
+Production: https://cva-website-94c84j3zc-ideh94s-projects.vercel.app [8s]
+https://cva-website-94c84j3zc-ideh94s-projects.vercel.appBuilding...
+Building...
+Building: Running build in Washington, D.C., USA (East) – iad1
+Building: Build machine configuration: 2 cores, 8 GB
+Building: Retrieving list of deployment files...
+Building: Previous build caches not available.
+Building: Downloading 207 deployment files...
+Building: Running "vercel build"
+Building: Vercel CLI 50.35.0
+Building: Installing dependencies...
+Building: added 1 package in 670ms
+Building: npm warn deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+Building: npm warn deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+Building: npm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+Building: npm warn deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
+Building: npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+Building: npm warn deprecated q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+Building: npm warn deprecated
+Building: npm warn deprecated (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+Building: npm warn deprecated workbox-cacheable-response@6.6.0: workbox-background-sync@6.6.0
+Building: npm warn deprecated workbox-google-analytics@6.6.0: It is not compatible with newer versions of GA starting with v4, as long as you are using GAv3 it should be ok, but the package is not longer being maintained
+Building: npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+Building: npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+Building: npm warn deprecated domexception@2.0.1: Use your platform's native DOMException instead
+Building: npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+Building: npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+Building: npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+Building: npm warn deprecated @babel/plugin-proposal-nullish-coalescing-operator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
+Building: npm warn deprecated @babel/plugin-proposal-optional-chaining@7.21.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
+Building: npm warn deprecated @babel/plugin-proposal-private-methods@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-methods instead.
+Building: npm warn deprecated @babel/plugin-proposal-numeric-separator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-numeric-separator instead.
+Building: npm warn deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+Building: npm warn deprecated @babel/plugin-proposal-private-property-in-object@7.21.11: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.
+Building: npm warn deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+Building: npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+Building: added 1373 packages, and audited 1374 packages in 18s
+Building: 278 packages are looking for funding
+Building: run `npm fund` for details
+Building: 47 vulnerabilities (14 low, 9 moderate, 22 high, 2 critical)
+Building: To address issues that do not require attention, run:
+Building: npm audit fix
+Building: To address all issues (including breaking changes), run:
+Building: npm audit fix --force
+Building: Run `npm audit` for details.
+Building: > client@0.1.0 build
+Building: > react-scripts build
+Building: (node:187) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
+Building: (Use `node --trace-deprecation ...` to show where the warning was created)
+Building: Creating an optimized production build...
+Building: Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+Building: npx update-browserslist-db@latest
+Building: Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Building: Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+Building: npx update-browserslist-db@latest
+Building: Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Building: Treating warnings as errors because process.env.CI = true.
+Building: Most CI servers set it automatically.
+Building: Failed to compile.
+Building: [eslint]
+Building: src/components/Testimonials.jsx
+Building: Line 1:28:  'useState' is defined but never used  no-unused-vars
+Building: Error: Command "cd client && npm install && npm run build" exited with 1
+Error: Command "cd client && npm install && npm run build" exited with 1

@@ -1,4 +1,18 @@
 User-agent: *
-Disallow:
+Allow: /
 
-Sitemap: https://cvamultiservices.com/sitemap.xml
+# Specifically allow AI/LLM crawlers for Generative Engine Optimization (GEO)
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Anthropic-ai
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://www.cvagroup.com.ng/sitemap.xml
