@@ -27,7 +27,7 @@
   width: 60px;
   height: 4px;
   background-color: var(--accent-orange);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: 3rem;
   border-radius: 2px;
 }
 
@@ -36,7 +36,6 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--spacing-lg);
   width: 100%;
-  margin: var(--spacing-md) auto 0;
 }
 
 .business-card {
@@ -131,13 +130,11 @@
 .businesses-cta .cta-button:hover .arrow-icon {
   transform: translateX(4px);
 }
-/* Responsive Grid Layout */
 .business-cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--spacing-lg);
   width: 100%;
-  margin: var(--spacing-md) auto 0;
   justify-content: center;
 }
 

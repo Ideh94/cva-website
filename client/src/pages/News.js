@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./News.css";
 
 function News() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: "ease-in-out",
+      delay: 100,
+    });
+  }, []);
   const news = [
     {
       title: "5 Ways Technology Is Transforming Agriculture",
@@ -22,12 +32,14 @@ function News() {
 
   return (
     <section className="news-wrapper">
-      <h2 className="news-heading">Latest News</h2>
-      <div className="news-underline" />
+      <div data-aos="fade-up">
+        <h2 className="news-heading">Latest News</h2>
+        <div className="news-underline" />
+      </div>
 
       <div className="news-grid">
         {news.map((item, id) => (
-          <article key={id} className="news-card">
+          <article key={id} className="news-card" data-aos="fade-up" data-aos-delay={id * 100}>
             <div className="news-card-inner">
               <h3>{item.title}</h3>
               <p>{item.text}</p>
