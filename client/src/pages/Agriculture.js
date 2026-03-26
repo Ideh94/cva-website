@@ -47,7 +47,7 @@ const Agriculture = () => {
   return (
     <div className="business-page">
       {/* Hero Section */}
-      <section className="business-hero">
+      <section className="business-hero" data-aos="fade-in">
         <div className="business-hero-content">
           <FaLeaf className="hero-icon" />
           <h1>Agriculture & Farming</h1>
@@ -60,7 +60,7 @@ const Agriculture = () => {
       </section>
 
       {/* Overview Section */}
-      <section className="business-overview">
+      <section className="business-overview" data-aos="fade-up">
         <div className="overview-content">
           <div className="overview-text">
             <h2>Transforming Nigeria's Agricultural Landscape</h2>
@@ -87,7 +87,7 @@ const Agriculture = () => {
           <h2>Our Agricultural Services</h2>
           <div className="services-grid">
             {services.map((service, index) => (
-              <div key={index} className="service-card">
+              <div key={index} className="service-card" data-aos="fade-up" data-aos-delay={index * 100}>
                 {service.icon}
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
@@ -100,19 +100,19 @@ const Agriculture = () => {
       {/* Stats Section */}
       <section className="stats-section">
         <div className="stats-container">
-          <div className="stat-item">
+          <div className="stat-item" data-aos="zoom-in">
             <div className="stat-number">500+</div>
             <div className="stat-label">Hectares Under Cultivation</div>
           </div>
-          <div className="stat-item">
+          <div className="stat-item" data-aos="zoom-in">
             <div className="stat-number">50K+</div>
             <div className="stat-label">Tons Annual Production</div>
           </div>
-          <div className="stat-item">
+          <div className="stat-item" data-aos="zoom-in">
             <div className="stat-number">200+</div>
             <div className="stat-label">Jobs Created</div>
           </div>
-          <div className="stat-item">
+          <div className="stat-item" data-aos="zoom-in">
             <div className="stat-number">100+</div>
             <div className="stat-label">Out-grower Partners</div>
           </div>
@@ -120,7 +120,7 @@ const Agriculture = () => {
       </section>
 
       {/* Features Section */}
-      <section className="features-section">
+      <section className="features-section" data-aos="fade-up">
         <h2>Why Choose Our Agricultural Services</h2>
         <div className="features-grid">
           {features.map((feature, index) => (
@@ -133,7 +133,7 @@ const Agriculture = () => {
       </section>
 
       {/* Rice Farming Highlight */}
-      <section className="business-overview">
+      <section className="business-overview" data-aos="fade-up">
         <div className="overview-content" style={{ flexDirection: 'row-reverse' }}>
           <div className="overview-text">
             <h2>Premium Rice Production</h2>

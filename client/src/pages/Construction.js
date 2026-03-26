@@ -46,7 +46,7 @@ const Construction = () => {
   return (
     <div className="business-page">
       {/* Hero Section */}
-      <section className="business-hero">
+      <section className="business-hero" data-aos="fade-in">
         <div className="business-hero-content">
           <FaHardHat className="hero-icon" />
           <h1>Construction Services</h1>
@@ -59,7 +59,7 @@ const Construction = () => {
       </section>
 
       {/* Overview Section */}
-      <section className="business-overview">
+      <section className="business-overview" data-aos="fade-up">
         <div className="overview-content">
           <div className="overview-text">
             <h2>Building Excellence, Creating Landmarks</h2>
@@ -87,7 +87,7 @@ const Construction = () => {
           <h2>Our Construction Services</h2>
           <div className="services-grid">
             {services.map((service, index) => (
-              <div key={index} className="service-card">
+              <div key={index} className="service-card" data-aos="fade-up" data-aos-delay={index * 100}>
                 {service.icon}
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
@@ -100,19 +100,19 @@ const Construction = () => {
       {/* Stats Section */}
       <section className="stats-section">
         <div className="stats-container">
-          <div className="stat-item">
+          <div className="stat-item" data-aos="zoom-in">
             <div className="stat-number">50+</div>
             <div className="stat-label">Projects Completed</div>
           </div>
-          <div className="stat-item">
-            <div className="stat-number">15+</div>
+          <div className="stat-item" data-aos="zoom-in">
+            <div className="stat-number">5+</div>
             <div className="stat-label">Years Experience</div>
           </div>
-          <div className="stat-item">
+          <div className="stat-item" data-aos="zoom-in">
             <div className="stat-number">100%</div>
             <div className="stat-label">Client Satisfaction</div>
           </div>
-          <div className="stat-item">
+          <div className="stat-item" data-aos="zoom-in">
             <div className="stat-number">300+</div>
             <div className="stat-label">Skilled Workers</div>
           </div>
@@ -120,7 +120,7 @@ const Construction = () => {
       </section>
 
       {/* Features Section */}
-      <section className="features-section">
+      <section className="features-section" data-aos="fade-up">
         <h2>Why Choose CVA Construction</h2>
         <div className="features-grid">
           {features.map((feature, index) => (

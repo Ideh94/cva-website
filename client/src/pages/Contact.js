@@ -45,7 +45,7 @@ const Contact = () => {
   return (
     <div className="contact-page">
       {/* Hero Section */}
-      <section className="contact-hero">
+      <section className="contact-hero" data-aos="fade-in">
         <div className="contact-hero-content">
           <h1>Get in Touch</h1>
           <p>Have questions or want to partner with us? We'd love to hear from you.</p>
@@ -55,7 +55,7 @@ const Contact = () => {
       <div className="contact-container">
         {/* Contact Information */}
         <div className="contact-info-section">
-          <div className="contact-card">
+          <div className="contact-card" data-aos="fade-up">
             <div className="contact-icon">
               <FaMapMarkerAlt />
             </div>
@@ -65,7 +65,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="contact-card">
+          <div className="contact-card" data-aos="fade-up">
             <div className="contact-icon">
               <FaPhoneAlt />
             </div>
@@ -76,7 +76,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="contact-card">
+          <div className="contact-card" data-aos="fade-up">
             <div className="contact-icon">
               <FaEnvelope />
             </div>
@@ -89,7 +89,7 @@ const Contact = () => {
         </div>
 
         {/* Contact Form */}
-        <div className="contact-form-section">
+        <div className="contact-form-section" data-aos="fade-left">
           <h2>Send us a Message</h2>
           <p>Fill out the form below and our team will get back to you within 24 hours.</p>
 

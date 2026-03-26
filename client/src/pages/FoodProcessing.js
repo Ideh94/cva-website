@@ -46,7 +46,7 @@ const FoodProcessing = () => {
   return (
     <div className="business-page">
       {/* Hero Section */}
-      <section className="business-hero">
+      <section className="business-hero" data-aos="fade-in">
         <div className="business-hero-content">
           <FaIndustry className="hero-icon" />
           <h1>Food Processing & Packaging</h1>
@@ -59,7 +59,7 @@ const FoodProcessing = () => {
       </section>
 
       {/* Overview Section */}
-      <section className="business-overview">
+      <section className="business-overview" data-aos="fade-up">
         <div className="overview-content">
           <div className="overview-text">
             <h2>Adding Value Through Processing Excellence</h2>
@@ -87,7 +87,7 @@ const FoodProcessing = () => {
           <h2>Our Processing Capabilities</h2>
           <div className="services-grid">
             {services.map((service, index) => (
-              <div key={index} className="service-card">
+              <div key={index} className="service-card" data-aos="fade-up" data-aos-delay={index * 100}>
                 {service.icon}
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
@@ -100,19 +100,19 @@ const FoodProcessing = () => {
       {/* Stats Section */}
       <section className="stats-section">
         <div className="stats-container">
-          <div className="stat-item">
+          <div className="stat-item" data-aos="zoom-in">
             <div className="stat-number">10K+</div>
             <div className="stat-label">Tons Processing Capacity</div>
           </div>
-          <div className="stat-item">
+          <div className="stat-item" data-aos="zoom-in">
             <div className="stat-number">99%</div>
             <div className="stat-label">Quality Compliance Rate</div>
           </div>
-          <div className="stat-item">
+          <div className="stat-item" data-aos="zoom-in">
             <div className="stat-number">50+</div>
             <div className="stat-label">Distribution Partners</div>
           </div>
-          <div className="stat-item">
+          <div className="stat-item" data-aos="zoom-in">
             <div className="stat-number">5</div>
             <div className="stat-label">Product Categories</div>
           </div>
@@ -120,7 +120,7 @@ const FoodProcessing = () => {
       </section>
 
       {/* Features Section */}
-      <section className="features-section">
+      <section className="features-section" data-aos="fade-up">
         <h2>Our Processing Standards</h2>
         <div className="features-grid">
           {features.map((feature, index) => (

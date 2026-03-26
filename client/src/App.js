@@ -1,6 +1,8 @@
 // App.js
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { theme } from "./constants/theme";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -40,6 +42,15 @@ Object.entries(theme.colors).forEach(([key, value]) => {
 
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: "ease-in-out",
+      delay: 100,
+    });
+  }, []);
+
   return (
     <Router>
       <Navbar />

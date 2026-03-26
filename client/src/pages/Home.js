@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div className="home-page">
       <Hero />
-      <section className="about-section">
+      <section className="about-section" data-aos="fade-up">
         <div className="about-overlay">
           <span className="eyebrow">DEDICATED TO EXCELLENCE</span>
           <h2>Who we are</h2>
@@ -47,7 +47,7 @@ const Home = () => {
       <Products />
       <Testimonials />
       <News />
-      <section className="contact-section">
+      <section className="contact-section" data-aos="fade-up">
         <div className="contact-overlay">
           <h2>Partner with CVA Group</h2>
           <p className="contact-paragraph">

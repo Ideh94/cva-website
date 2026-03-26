@@ -64,7 +64,7 @@ const CapacityDevelopment = () => {
   return (
     <div className="business-page">
       {/* Hero Section */}
-      <section className="business-hero">
+      <section className="business-hero" data-aos="fade-in">
         <div className="business-hero-content">
           <FaGraduationCap className="hero-icon" />
           <h1>Capacity Development</h1>
@@ -77,7 +77,7 @@ const CapacityDevelopment = () => {
       </section>
 
       {/* Overview Section */}
-      <section className="business-overview">
+      <section className="business-overview" data-aos="fade-up">
         <div className="overview-content">
           <div className="overview-text">
             <h2>Investing in People, Growing the Future</h2>
@@ -106,7 +106,7 @@ const CapacityDevelopment = () => {
           <h2>Our Training Programs</h2>
           <div className="services-grid">
             {services.map((service, index) => (
-              <div key={index} className="service-card">
+              <div key={index} className="service-card" data-aos="fade-up" data-aos-delay={index * 100}>
                 {service.icon}
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
@@ -119,19 +119,19 @@ const CapacityDevelopment = () => {
       {/* Stats Section */}
       <section className="stats-section">
         <div className="stats-container">
-          <div className="stat-item">
+          <div className="stat-item" data-aos="zoom-in">
             <div className="stat-number">500+</div>
             <div className="stat-label">Graduates Trained</div>
           </div>
-          <div className="stat-item">
+          <div className="stat-item" data-aos="zoom-in">
             <div className="stat-number">85%</div>
             <div className="stat-label">Employment Rate</div>
           </div>
-          <div className="stat-item">
+          <div className="stat-item" data-aos="zoom-in">
             <div className="stat-number">10+</div>
             <div className="stat-label">Training Programs</div>
           </div>
-          <div className="stat-item">
+          <div className="stat-item" data-aos="zoom-in">
             <div className="stat-number">50+</div>
             <div className="stat-label">Businesses Started</div>
           </div>
@@ -139,7 +139,7 @@ const CapacityDevelopment = () => {
       </section>
 
       {/* Featured Programs */}
-      <section className="features-section">
+      <section className="features-section" data-aos="fade-up">
         <h2>Featured Programs</h2>
         <div className="services-grid">
           {programs.map((program, index) => (

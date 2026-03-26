@@ -5,14 +5,14 @@ import './About.css';
 function About() {
   return (
     <div className="about-page">
-      <section className="about-hero">
+      <section className="about-hero" data-aos="fade-in">
         <h1>About CVA Multi Services Nig Ltd.</h1>  
         <p>Empowering Africa’s business ecosystem with traceable and scalable solutions in agriculture, logistics, and consulting.</p>
       </section>
 
 
       <section className="about-content">
-        <div className="about-text">
+        <div className="about-text" data-aos="fade-right">
           <h2>Who We Are</h2>
           <p>
             CVA Multi Services is a diversified Nigerian company dedicated to meeting the basic needs of individuals, families, and businesses through value-added products and services. With operations spanning agriculture, food processing, logistics, construction, and capacity development, we are driven by the mission to empower communities and strengthen local industries.
@@ -41,7 +41,7 @@ function About() {
         <section className="timeline-section">
           <h2>Our Journey</h2>
           <div className="timeline">
-            <div className="timeline-item">
+            <div className="timeline-item" data-aos="fade-up">
               <div className="timeline-year">2015</div>
               <div className="timeline-content">
                 <h3>Founded</h3>
@@ -49,7 +49,7 @@ function About() {
               </div>
             </div>
 
-            <div className="timeline-item">
+            <div className="timeline-item" data-aos="fade-up">
               <div className="timeline-year">2018</div>
               <div className="timeline-content">
                 <h3>Expanded Operations</h3>
@@ -57,7 +57,7 @@ function About() {
               </div>
             </div>
 
-            <div className="timeline-item">
+            <div className="timeline-item" data-aos="fade-up">
               <div className="timeline-year">2021</div>
               <div className="timeline-content">
                 <h3>Digital Platform Launch</h3>
@@ -65,7 +65,7 @@ function About() {
               </div>
             </div>
 
-            <div className="timeline-item">
+            <div className="timeline-item" data-aos="fade-up">
               <div className="timeline-year">2024</div>
               <div className="timeline-content">
                 <h3>National Recognition</h3>

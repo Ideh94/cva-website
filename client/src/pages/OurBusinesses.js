@@ -15,7 +15,7 @@ const OurBusinesses = () => {
   return (
     <div className="our-businesses-page">
       {/* Hero Section */}
-      <section className="businesses-hero">
+      <section className="businesses-hero" data-aos="fade-in">
         <div className="businesses-hero-content">
           <h1>Our Businesses</h1>
           <p>Driving sustainable growth and innovation across Nigeria's key economic sectors.</p>
@@ -23,7 +23,7 @@ const OurBusinesses = () => {
       </section>
 
       {/* Fish Farming Section */}
-      <section className="business-detail-section">
+      <section className="business-detail-section" data-aos="fade-up">
         <div className="business-image-container">
           <img src={FishFarming} alt="Fish Farming Operations" />
         </div>
@@ -44,7 +44,7 @@ const OurBusinesses = () => {
       </section>
 
       {/* Rice Farming Section */}
-      <section className="business-detail-section reverse">
+      <section className="business-detail-section reverse" data-aos="fade-up">
         <div className="business-image-container">
           <img src={RiceFarming} alt="Rice Farming Fields" />
         </div>
@@ -65,7 +65,7 @@ const OurBusinesses = () => {
       </section>
 
       {/* Food Processing Section */}
-      <section className="business-detail-section">
+      <section className="business-detail-section" data-aos="fade-up">
         <div className="business-image-container">
           <img src={FoodProcessing} alt="Food Processing Plant" />
         </div>
@@ -86,7 +86,7 @@ const OurBusinesses = () => {
       </section>
 
       {/* Construction Section */}
-      <section className="business-detail-section reverse">
+      <section className="business-detail-section reverse" data-aos="fade-up">
         <div className="business-image-container">
           <img src={Construction} alt="Construction Projects" />
         </div>
@@ -107,7 +107,7 @@ const OurBusinesses = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="businesses-cta-section">
+      <section className="businesses-cta-section" data-aos="fade-in">
         <h2>Ready to Partner With Us?</h2>
         <p>Explore opportunities to collaborate and grow with CVA Group.</p>
         <Link to="/contact" className="cta-button-large">

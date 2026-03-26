@@ -45,7 +45,7 @@ const Logistics = () => {
   return (
     <div className="business-page">
       {/* Hero Section */}
-      <section className="business-hero">
+      <section className="business-hero" data-aos="fade-in">
         <div className="business-hero-content">
           <FaTruck className="hero-icon" />
           <h1>Logistics & Distribution</h1>
@@ -58,7 +58,7 @@ const Logistics = () => {
       </section>
 
       {/* Overview Section */}
-      <section className="business-overview">
+      <section className="business-overview" data-aos="fade-up">
         <div className="overview-content">
           <div className="overview-text">
             <h2>Moving Nigeria Forward, One Delivery at a Time</h2>
@@ -92,7 +92,7 @@ const Logistics = () => {
           <h2>Our Logistics Solutions</h2>
           <div className="services-grid">
             {services.map((service, index) => (
-              <div key={index} className="service-card">
+              <div key={index} className="service-card" data-aos="fade-up" data-aos-delay={index * 100}>
                 {service.icon}
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
@@ -105,19 +105,19 @@ const Logistics = () => {
       {/* Stats Section */}
       <section className="stats-section">
         <div className="stats-container">
-          <div className="stat-item">
+          <div className="stat-item" data-aos="zoom-in">
             <div className="stat-number">30+</div>
             <div className="stat-label">Vehicles in Fleet</div>
           </div>
-          <div className="stat-item">
+          <div className="stat-item" data-aos="zoom-in">
             <div className="stat-number">36</div>
             <div className="stat-label">States Covered</div>
           </div>
-          <div className="stat-item">
+          <div className="stat-item" data-aos="zoom-in">
             <div className="stat-number">98%</div>
             <div className="stat-label">On-Time Delivery Rate</div>
           </div>
-          <div className="stat-item">
+          <div className="stat-item" data-aos="zoom-in">
             <div className="stat-number">5K+</div>
             <div className="stat-label">Monthly Deliveries</div>
           </div>
@@ -125,7 +125,7 @@ const Logistics = () => {
       </section>
 
       {/* Features Section */}
-      <section className="features-section">
+      <section className="features-section" data-aos="fade-up">
         <h2>Our Logistics Advantages</h2>
         <div className="features-grid">
           {features.map((feature, index) => (
